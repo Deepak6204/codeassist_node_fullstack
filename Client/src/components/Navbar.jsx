@@ -22,20 +22,22 @@ const Navbar = ({ name, isLogged }) => {
             </label>
             <ul>
                 <li><Link to="/">HOME</Link></li>
-                <li><Link to="/coming_soon">ABOUT</Link></li>
-                <li><Link to="/quiz">PRACTICE</Link></li>
+                <li><Link to="/coming_soon">PROBLEMS</Link></li>
                 <li><Link to="/quiz">CONTESTS</Link></li>
+                <li><Link to="/quiz">IDEA-PITCHING</Link></li>
+                <li><Link to="/quiz">PROJECTS</Link></li>
+                <li><Link to="/quiz">ROADMAPS</Link></li>
                 <li><Link to="/notes">NOTES</Link></li>
                 <li className="user-dropdown">
                     <a href="#" id="user-dropdown-toggle" onClick={toggleDropdown}>
                         <FaUser />  {/* Using the IoLogIn icon */}
                     </a>
-                    {isDropdownOpen && (
+                    {/* {isDropdownOpen && (
                         <ul id="user-dropdown-menu">
                             <li id="signup-option"><Link to={`/${name}`}>{name}</Link></li>
                             <li id="logout-option"><Link to={`/${isLogged}`}>{isLogged}</Link></li>
                         </ul>
-                    )}
+                    )} */}
                 </li>
             </ul>
         </div>
