@@ -11,6 +11,7 @@ import Logout from './pages/Logout'; // Component for the logout page
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Footer from './components/Footer';
+import Problems from './pages/Problems';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/coming_soon" element={<About />} />
                 <Route path="/quiz" element={<Quiz />} />
                 <Route path="/notes" element={<Notes />} />
+                <Route path="/problems" element={<Problems />} />
                 <Route path="/leaderboard" element={<LeaderBoard />} />
                 <Route path="/:name" element={<UserProfile />} />
                 <Route path="/:isLogged" element={<Logout />} />
