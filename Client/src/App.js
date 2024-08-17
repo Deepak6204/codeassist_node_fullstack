@@ -11,6 +11,8 @@ import Logout from './pages/Logout'; // Component for the logout page
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Footer from './components/Footer';
+import Profile from './pages/Profile';
+import EditProfile from './pages/EditProfile';
 
 function App() {
     return (
@@ -26,6 +28,8 @@ function App() {
                 <Route path="/:isLogged" element={<Logout />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/profile" element={<Profile/>}/>
+                <Route path="/edit-profile" element={<EditProfile/>}/>
             </Routes>
             <Footer/>
         </Router>
