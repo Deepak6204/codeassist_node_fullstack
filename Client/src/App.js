@@ -12,6 +12,7 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import Footer from './components/Footer';
 import Problems from './pages/Problems';
+import ProblemDetails from './components/ProblemDetails';
 
 function App() {
     return (
@@ -22,14 +23,15 @@ function App() {
                 <Route path="/coming_soon" element={<About />} />
                 <Route path="/quiz" element={<Quiz />} />
                 <Route path="/notes" element={<Notes />} />
-                <Route path="/problems" element={<Problems />} />
+                <Route exact path="/problems" element={<Problems />} />
                 <Route path="/leaderboard" element={<LeaderBoard />} />
                 <Route path="/:name" element={<UserProfile />} />
                 <Route path="/:isLogged" element={<Logout />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/problems/:id" element={<ProblemDetails/>} />
             </Routes>
-            <Footer/>
+            {/* <Footer/> */}
         </Router>
     );
 }
