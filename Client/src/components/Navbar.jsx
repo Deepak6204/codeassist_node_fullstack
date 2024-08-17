@@ -22,7 +22,7 @@ const Navbar = ({ name, isLogged }) => {
             </label>
             <ul>
                 <li><Link to="/">HOME</Link></li>
-                <li><Link to="/coming_soon">PROBLEMS</Link></li>
+                <li><Link to="/problems">PROBLEMS</Link></li>
                 <li><Link to="/quiz">CONTESTS</Link></li>
                 <li><Link to="/quiz">IDEA-PITCHING</Link></li>
                 <li><Link to="/quiz">PROJECTS</Link></li>

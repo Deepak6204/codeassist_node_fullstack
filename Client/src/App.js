@@ -11,6 +11,8 @@ import Logout from './pages/Logout'; // Component for the logout page
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Footer from './components/Footer';
+import Problems from './pages/Problems';
+import ProblemDetails from './components/ProblemDetails';
 import Profile from './pages/Profile';
 import EditProfile from './pages/EditProfile';
 
@@ -23,15 +25,17 @@ function App() {
                 <Route path="/coming_soon" element={<About />} />
                 <Route path="/quiz" element={<Quiz />} />
                 <Route path="/notes" element={<Notes />} />
+                <Route exact path="/problems" element={<Problems />} />
                 <Route path="/leaderboard" element={<LeaderBoard />} />
                 <Route path="/:name" element={<UserProfile />} />
                 <Route path="/:isLogged" element={<Logout />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/problems/:id" element={<ProblemDetails/>} />
                 <Route path="/profile" element={<Profile/>}/>
                 <Route path="/edit-profile" element={<EditProfile/>}/>
             </Routes>
-            <Footer/>
+            {/* <Footer/> */}
         </Router>
     );
 }
