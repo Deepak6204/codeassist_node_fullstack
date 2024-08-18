@@ -4,17 +4,42 @@ import React from 'react';
 const ProfileContent = () => {
     return (
         <div className="profile-content">
-            <div className="prof-cont-1">
-                <h3>Basic Info</h3>
-                <div className="info-group">
-                    <p>Name Sumit Kumar <button>Edit</button></p>
-                    <p>Gender Male <button>Edit</button></p>
-                    <p>Location India, Bihar, Muzaffarpur <button>Edit</button></p>
-                    <p>Birthday December 8, 2002 <button>Edit</button></p>
-                    <p>Summary <button>Edit</button></p>
-                    <p>Website <button>Edit</button></p>
-                    <p>Linkedln <button>Edit</button></p>
-                    <p>Github <button>Edit</button></p>
+           <div className="basic-info-container">
+                <h3 className="basic-info-title">Basic Info</h3>
+                <div className="basic-info-item">
+                    <span className="basic-info-label">Name</span>
+                    <span className="basic-info-value">Enter Your Name</span>
+                    <button className="edit-button">Edit</button>
+                </div>
+                <div className="basic-info-item">
+                    <span className="basic-info-label">Gender</span>
+                    <span className="basic-info-value">Enter Your Gender</span>
+                    <button className="edit-button">Edit</button>
+                </div>
+                <div className="basic-info-item">
+                    <span className="basic-info-label">Location</span>
+                    <span className="basic-info-value">Enter Your Place</span>
+                    <button className="edit-button">Edit</button>
+                </div>
+                <div className="basic-info-item">
+                    <span className="basic-info-label">Birthday</span>
+                    <span className="basic-info-value"><input type="date" className='date-input' /></span>
+                    <button className="edit-button">Edit</button>
+                </div>
+                <div className="basic-info-item">
+                    <span className="basic-info-label">Website</span>
+                    <span className="basic-info-value">Your Blog or Portfolio</span>
+                    <button className="edit-button">Edit</button>
+                </div>
+                <div className="basic-info-item">
+                    <span className="basic-info-label">Github</span>
+                    <span className="basic-info-value">Your Github URL or Username</span>
+                    <button className="edit-button">Edit</button>
+                </div>
+                <div className="basic-info-item">
+                    <span className="basic-info-label">Linkedln</span>
+                    <span className="basic-info-value">Your Linkedln URL or Username</span>
+                    <button className="edit-button">Edit</button>
                 </div>
             </div>
         </div>

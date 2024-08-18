@@ -1349,8 +1349,7 @@ h3#below_page_title span:hover {
 .main-content {
   display: flex;
   flex-direction: row;
-
-  height: 70vh;
+  height: 50vh;
   width: 70vw;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -1362,28 +1361,47 @@ h3#below_page_title span:hover {
 .profile-header {
   display: flex;
   align-items: center;
-  height: 40vh;
+  height: 42vh;
   background-color: #333;
   color: white;
 }
 
-.profile-image {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-right: 5.5%;
-  margin-left: 18%;
-  margin-top: -4%;
+.profile-photo-edit {
+  margin-left: 19%;
+  margin-top: -5%;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+
+.img-display-after-edit {
+  height: 140px;
+  width: 140px;
+  border-radius: 100%;
+}
+.img-display-before-edit {
+  height: 140px;
+  width: 140px;
+  border-radius: 100%;
 }
 .profile-details {
   margin-top: -4%;
+  margin-left: 3%;
+  background-color: #333;
+
 }
 .profile-details h2 {
   margin: 0;
+  font-size: 1.7rem;
+  background-color: #333;
+
 }
 
 .profile-details p {
-  margin: 5px 0;
+  background-color: #333;
+  color: grey;
 }
 
 
@@ -1423,7 +1441,6 @@ h3#below_page_title span:hover {
 .profile-content {
   flex-grow: 1;
   background-color: white;
-
   margin-top: -100px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -1473,39 +1490,62 @@ button {
 
 
 .basic-info-container {
-  background-color: #fff; /* White background for the info box */
-  border-radius: 8px; /* Rounded corners */
+  background-color: #fff; 
+  border-radius: 8px; 
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   margin-top: 20px;
-  width: 600px; /* Set a fixed width for the container */
+  width: 800px; 
 }
 
 .basic-info-title {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #333;
+  color: #333; 
+  background-color: #fff; 
 }
 
 .basic-info-item {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
-  border-bottom: 1px solid #f0f0f0; /* Light border between items */
+  border-bottom: 1px solid #f0f0f0; 
+  background-color: #fff; 
 }
 
 .basic-info-item:last-child {
-  border-bottom: none; /* Remove the border for the last item */
+  border-bottom: none; 
+  background-color: #fff; 
 }
 
 .basic-info-label {
   font-weight: 500;
   color: #666;
+  font-size: 1.3rem;
+  background-color: #fff; 
 }
 
 .basic-info-value {
   color: #333;
+  font-size: 1.3rem;
+  background-color: #fff; 
+}
+.edit-button {
+  background-color: #fff; 
+  color: black;
+  border: 1px solid rgb(0, 255, 166);
+  font-size: 1.3rem;
+}
+
+.date-input {
+  background-color: #fff; 
+  color: black;
+  font-size: 1.3rem;
+  border: none;
+}
+.date-input:hover {
+  border: none;
 }
 /***** End profile-section *****/
 

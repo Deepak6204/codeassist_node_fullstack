@@ -1,7 +1,8 @@
 import React from 'react'
 import { useRef, useState } from 'react'
 import profile from '../images/prof.jpg'
-import { MdOutlineLocationOn } from "react-icons/md";import { MdOutlineSchool } from "react-icons/md";
+import { MdOutlineLocationOn } from "react-icons/md";
+import { MdOutlineSchool } from "react-icons/md";
 import { TbPencil } from "react-icons/tb";
 import { useNavigate } from 'react-router-dom';
 
@@ -28,7 +29,8 @@ const Profile = () => {
         <div className="profile-wrapper">
           <div className="profile-wrapper-content">
             <div className="profile-photo" onClick={handleImageClick}>
-              {image? <img src={URL.createObjectURL(image) } alt="" className='img-display-after'/> : <img src={profile} alt="" className='img-display-before' />}
+              {image? <img src={URL.createObjectURL(image) } alt="" className='img-display-after'/> : 
+              <img src={profile} alt="" className='img-display-before' />}
               <input 
                 type="file" 
                 ref={inputRef}
