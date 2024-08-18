@@ -1349,9 +1349,9 @@ h3#below_page_title span:hover {
 .main-content {
   display: flex;
   flex-direction: row;
-  height: 50vh;
-  width: 70vw;
-  border-radius: 10px;
+  height: 55vh;
+  width: 67vw;
+  border-botton: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -1437,17 +1437,6 @@ h3#below_page_title span:hover {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
 }
-
-.profile-content {
-  flex-grow: 1;
-  background-color: white;
-  margin-top: -100px;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-}
 .prof-cont-1 {
   background-color: #f4f4f4;
   padding: 25px;
@@ -1458,11 +1447,7 @@ h3#below_page_title span:hover {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-.profile-content h3 {
-  background-color: #f4f4f4;
-  color:  black;
-  font-size: 1.5rem;
-}
+
 .info-group {
   background-color: #f4f4f4;
 }
@@ -1488,7 +1473,21 @@ button {
 
 }
 
-
+.profile-content {
+  flex-grow: 1;
+  background-color: white;
+  margin-top: -100px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.profile-content h3 {
+  background-color: #f4f4f4;
+  color:  black;
+  font-size: 1.5rem;
+}
 .basic-info-container {
   background-color: #fff; 
   border-radius: 8px; 
@@ -1512,6 +1511,7 @@ button {
   padding: 10px 0;
   border-bottom: 1px solid #f0f0f0; 
   background-color: #fff; 
+  gap: 10px;
 }
 
 .basic-info-item:last-child {
@@ -1526,28 +1526,136 @@ button {
   background-color: #fff; 
 }
 
+.input-edit {
+  background-color: #fff; 
+  color: black;
+}
 .basic-info-value {
   color: #333;
   font-size: 1.3rem;
   background-color: #fff; 
 }
-.edit-button {
+.edit-button, .save-button {
   background-color: #fff; 
   color: black;
   border: 1px solid rgb(0, 255, 166);
   font-size: 1.3rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+.edit-button:hover, .save-button:hover {
+  background-color: rgb(0, 255, 166);
+  color: white;
+  border-color: rgb(0, 255, 166);
 }
 
 .date-input {
   background-color: #fff; 
   color: black;
   font-size: 1.3rem;
-  border: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
 }
+
 .date-input:hover {
-  border: none;
+  border: 1px solid rgb(0, 255, 166);
 }
 /***** End profile-section *****/
+
+
+/***** problem *****/ 
+.table-container {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.headline-problem {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+  background-color: #1e1e1e;
+}
+
+.problem-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.problem-table thead th {
+  border-bottom: 2px solid #444;
+  padding-bottom: 12px;
+  padding-right: 5px;
+  font-weight: normal;
+  text-align: left;
+  font-size: 1.3rem;
+  color: #bbb;
+}
+
+.problem-table tbody tr:nth-child(odd) {
+  background-color: #2e2e2e; /* Grey */
+}
+
+.problem-table tbody tr:nth-child(even) {
+  background-color: #1a1a1a; /* Black */
+}
+
+.problem-table tbody td {
+  padding: 14px 10px;
+  border-bottom: 1px solid #444;
+}
+
+.problem-table tbody tr:hover {
+  background-color: unset; /* No change on hover */
+}
+
+.problem-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.status {
+  font-weight: bold;
+  text-transform: capitalize;
+  color: white;
+}
+
+.status.solved {
+  color: #4caf50;
+}
+
+.status.unsolved {
+  color: #f44336;
+}
+
+.difficulty.easy {
+  color: #8bc34a;
+}
+
+.difficulty.medium {
+  color: #ffc107;
+}
+
+.difficulty.hard {
+  color: #f44336;
+}
+
+
+
+
+
+/***** End problem *****/
+
 
 
 

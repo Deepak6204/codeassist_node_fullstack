@@ -1,46 +1,85 @@
-import React from 'react';
-// import './ProfileContent.css';
+import React, { useState } from 'react';
 
 const ProfileContent = () => {
+    const [editMode, setEditMode] = useState({
+        name: false,
+        gender: false,
+        location: false,
+        birthday: false,
+        website: false,
+        github: false,
+        linkedin: false,
+    });
+
+    const [formData, setFormData] = useState({
+        name: "Enter Your Name",
+        gender: "Enter Your Gender",
+        location: "Enter Your Place",
+        birthday: "",
+        website: "Your Blog or Portfolio",
+        github: "Your Github URL or Username",
+        linkedin: "Your Linkedln URL or Username",
+    });
+
+    const handleEditClick = (field) => {
+        setEditMode(prevState => ({
+            ...prevState,
+            [field]: !prevState[field],
+        }));
+    };
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value,
+        }));
+    };
+
+    const renderField = (field, label, type = "text") => (
+        <div className="basic-info-item">
+            <span className="basic-info-label">{label}</span>
+            {editMode[field] ? (
+                <>
+                    {type === "date" ? (
+                        <input
+                            type="date"
+                            name={field}
+                            value={formData[field]}
+                            onChange={handleInputChange}
+                            className='date-input'
+                        />
+                    ) : (
+                        <input
+                            className='input-edit'
+                            type="text"
+                            name={field}
+                            value={formData[field]}
+                            onChange={handleInputChange}
+                        />
+                    )}
+                    <button className="save-button" onClick={() => handleEditClick(field)}>Save</button>
+                </>
+            ) : (
+                <>
+                    <span className="basic-info-value">{formData[field]}</span>
+                    <button className="edit-button" onClick={() => handleEditClick(field)}>Edit</button>
+                </>
+            )}
+        </div>
+    );
+
     return (
         <div className="profile-content">
-           <div className="basic-info-container">
+            <div className="basic-info-container">
                 <h3 className="basic-info-title">Basic Info</h3>
-                <div className="basic-info-item">
-                    <span className="basic-info-label">Name</span>
-                    <span className="basic-info-value">Enter Your Name</span>
-                    <button className="edit-button">Edit</button>
-                </div>
-                <div className="basic-info-item">
-                    <span className="basic-info-label">Gender</span>
-                    <span className="basic-info-value">Enter Your Gender</span>
-                    <button className="edit-button">Edit</button>
-                </div>
-                <div className="basic-info-item">
-                    <span className="basic-info-label">Location</span>
-                    <span className="basic-info-value">Enter Your Place</span>
-                    <button className="edit-button">Edit</button>
-                </div>
-                <div className="basic-info-item">
-                    <span className="basic-info-label">Birthday</span>
-                    <span className="basic-info-value"><input type="date" className='date-input' /></span>
-                    <button className="edit-button">Edit</button>
-                </div>
-                <div className="basic-info-item">
-                    <span className="basic-info-label">Website</span>
-                    <span className="basic-info-value">Your Blog or Portfolio</span>
-                    <button className="edit-button">Edit</button>
-                </div>
-                <div className="basic-info-item">
-                    <span className="basic-info-label">Github</span>
-                    <span className="basic-info-value">Your Github URL or Username</span>
-                    <button className="edit-button">Edit</button>
-                </div>
-                <div className="basic-info-item">
-                    <span className="basic-info-label">Linkedln</span>
-                    <span className="basic-info-value">Your Linkedln URL or Username</span>
-                    <button className="edit-button">Edit</button>
-                </div>
+                {renderField("name", "Name")}
+                {renderField("gender", "Gender")}
+                {renderField("location", "Location")}
+                {renderField("birthday", "Birthday", "date")}
+                {renderField("website", "Website")}
+                {renderField("github", "Github")}
+                {renderField("linkedin", "Linkedln")}
             </div>
         </div>
     );
