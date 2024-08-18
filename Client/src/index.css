@@ -7,6 +7,7 @@
   text-decoration: none;
   font-family: monospace;
   box-sizing: border-box;
+  /* font-size: medium !important; */
 }
 body {
 /* min-height: 100vh; */
@@ -1163,6 +1164,7 @@ h3#below_page_title span:hover {
   grid-template-columns: 1fr 2fr;
   margin: 5%;
 }
+
 .profile-detail {
   background-color: rgb(19, 19, 19);
   margin-top: 20%;
@@ -1299,26 +1301,212 @@ h3#below_page_title span:hover {
 }
 .e-p-c-c {
   box-shadow: 0 0 1px 0px grey;
-  background-color: rgb(19, 19, 19);
+  display: flex;
+  flex-direction: column;
+  background-color: white;
   border-radius: 10px;
   margin: 5% 10% 0% 10%;
   width: 60vw;
-  border: 2px solid red;
-  height: 70vh;
+  padding: 10px;
+  height: 90vh;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .e-p-c-c h1 {
+  background-color: white;
+  color: black;
   padding: 5px;
-  background-color: rgb(19, 19, 19);
-  border-bottom:  0.1px solid rgb(250, 236, 236) ;
+  border-bottom:  0.1px solid whitesmoke ;
 }
-.e-p-c-c ul li {
-  background-color: rgb(19, 19, 19);
+.e-p-c-c-c {
+  color: grey;
   font-size: 1.5rem;
+  background-color: white;
   border-bottom:  0.1px solid rgb(250, 236, 236) ;
-  padding: 5px;
+  padding: 10px;
 }
 
+.profile-cont {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Profile {
+  display: flex;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+
+  height: 70vh;
+  width: 70vw;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  height: 40vh;
+  background-color: #333;
+  color: white;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-right: 5.5%;
+  margin-left: 18%;
+  margin-top: -4%;
+}
+.profile-details {
+  margin-top: -4%;
+}
+.profile-details h2 {
+  margin: 0;
+}
+
+.profile-details p {
+  margin: 5px 0;
+}
+
+
+.profile-sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+
+}
+
+.profile-sidebar ul {
+  background-color: #f4f4f4;
+  list-style-type: none;
+  /* margin: -30px; */
+}
+
+.profile-sidebar li {
+  cursor: pointer;
+  background-color: #f4f4f4;
+  color: black;
+  font-size: 1.3rem;
+  margin: 10px 5px;
+  font-weight: 400;
+  padding: 10px;
+}
+.basic-info {
+  border: 1px solid rgb(0, 255, 166);
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.profile-content {
+  flex-grow: 1;
+  background-color: white;
+
+  margin-top: -100px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.prof-cont-1 {
+  background-color: #f4f4f4;
+  padding: 25px;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.profile-content h3 {
+  background-color: #f4f4f4;
+  color:  black;
+  font-size: 1.5rem;
+}
+.info-group {
+  background-color: #f4f4f4;
+}
+
+.info-group p {
+  margin: 10px 0;
+  background-color: #f4f4f4;
+  color:  black;
+  font-size: 1.3rem;
+  margin: 15px 0px;
+  font-weight: 300;
+  border-bottom: 0.1px solid;
+  padding: 8px 0px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+
+.basic-info-container {
+  background-color: #fff; /* White background for the info box */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-top: 20px;
+  width: 600px; /* Set a fixed width for the container */
+}
+
+.basic-info-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.basic-info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0; /* Light border between items */
+}
+
+.basic-info-item:last-child {
+  border-bottom: none; /* Remove the border for the last item */
+}
+
+.basic-info-label {
+  font-weight: 500;
+  color: #666;
+}
+
+.basic-info-value {
+  color: #333;
+}
 /***** End profile-section *****/
 
 

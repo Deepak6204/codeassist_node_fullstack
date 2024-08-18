@@ -3,10 +3,13 @@ import { useRef, useState } from 'react'
 import profile from '../images/prof.jpg'
 import { MdOutlineLocationOn } from "react-icons/md";import { MdOutlineSchool } from "react-icons/md";
 import { TbPencil } from "react-icons/tb";
+import { useNavigate } from 'react-router-dom';
 
+ 
 const Profile = () => {
   const inputRef = useRef(null);
   const [image, setImage] = useState("");
+  const navigate = useNavigate();
   
   const handleImageClick = () => {
     inputRef.current.click();
@@ -14,6 +17,9 @@ const Profile = () => {
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     setImage(e.target.files[0]);
+  }
+  const handleEditProfile = () => {
+    navigate('/edit-profile');
   }
 
   return (
@@ -36,7 +42,7 @@ const Profile = () => {
             </div>
           </div>
           <div className="profile-edit-btn">
-            <button className='button btn'>Edit Profile</button>
+            <button className='button btn' onClick={handleEditProfile}>Edit Profile</button>
           </div>
           <div className="profile-wrapper-content2">
             <div className="profile-wrapper-content2-detail">
