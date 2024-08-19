@@ -5,6 +5,7 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import { MdOutlineSchool } from "react-icons/md";
 import { TbPencil } from "react-icons/tb";
 import { useNavigate } from 'react-router-dom';
+import Navbar from "../components/Navbar"
 
  
 const Profile = () => {
@@ -25,6 +26,7 @@ const Profile = () => {
 
   return (
     <>
+    <Navbar/>
       <div className="profile-section">
         <div className="profile-wrapper">
           <div className="profile-wrapper-content">

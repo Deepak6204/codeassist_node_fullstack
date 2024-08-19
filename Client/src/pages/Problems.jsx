@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar'
 
 function Problems() {
   const problemList = [
@@ -11,6 +12,8 @@ function Problems() {
   ];
 
   return (
+    <>
+    <Navbar/>
     <div className="table-container">
       <h1 className="headline-problem"><input type="search" placeholder='Search questions' /></h1>
       <table className="problem-table">
@@ -42,6 +45,7 @@ function Problems() {
         </tbody>
       </table>
     </div>
+    </>
   );
 }
 

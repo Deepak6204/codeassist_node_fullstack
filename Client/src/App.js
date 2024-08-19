@@ -18,7 +18,7 @@ import EditProfile from './pages/EditProfile';
 function App() {
     return (
         <Router>
-            <Navbar />
+            {/* <Navbar /> */}
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/coming_soon" element={<About />} />

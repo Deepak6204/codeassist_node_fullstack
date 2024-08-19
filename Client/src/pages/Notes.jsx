@@ -9,6 +9,8 @@ import cImage from '../images/c.webp';
 import dsaImage from '../images/dsa.webp';
 import cppImage from '../images/cpp.webp';
 import javaImage from '../images/java.png';
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const notesData = [
     { imgSrc: htmlImage, title: 'HTML Notes', fileName: 'html.pdf' },
@@ -23,6 +25,8 @@ const notesData = [
 
 const Notes = () => {
     return (
+        <>
+        <Navbar/>
         <div id="interface">
             <div className="notes-container">
                 <div className="notes-heading">
@@ -42,6 +46,8 @@ const Notes = () => {
                 </div>
             </div>
         </div>
+        <Footer/>
+      </>
     );
 };
 

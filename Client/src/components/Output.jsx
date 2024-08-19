@@ -30,7 +30,7 @@ const Output = ({ editorRef, language }) => {
   };
 
   return (
-    <Box w="50%">
+    <Box w="100%">
       <Text mb={2} fontSize="lg">
         Output
       </Text>
@@ -44,7 +44,7 @@ const Output = ({ editorRef, language }) => {
         Run Code
       </Button>
       <Box
-        height="75vh"
+        height="20vh"
         p={2}
         color={isError ? "red.400" : ""}
         border="1px solid"
