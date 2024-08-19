@@ -8,19 +8,13 @@ function Problems() {
     { id: 3, title: "Add Two Numbers", difficulty: "Medium" },
     { id: 4, title: "Longest Substring Without Repeating Characters", difficulty: "Medium" },
     { id: 5, title: "Median of Two Sorted Arrays", difficulty: "Hard" },
-    { id: 3, title: "Add Two Numbers", difficulty: "Medium" },
-    { id: 4, title: "Longest Substring Without Repeating Characters", difficulty: "Medium" },
-    { id: 5, title: "Median of Two Sorted Arrays", difficulty: "Hard" },
-    { id: 3, title: "Add Two Numbers", difficulty: "Medium" },
-    { id: 4, title: "Longest Substring Without Repeating Characters", difficulty: "Medium" },
-    { id: 5, title: "Median of Two Sorted Arrays", difficulty: "Hard" },
   ];
 
   return (
     <div className="table-container">
-      <h1 className="headline-problem">Problems</h1>
+      <h1 className="headline-problem"><input type="search" placeholder='Search questions' /></h1>
       <table className="problem-table">
-        <thead>
+        <thead className="problem-thead">
           <tr>
             <th>Status</th>
             <th>Title</th>
@@ -28,10 +22,20 @@ function Problems() {
           </tr>
         </thead>
         <tbody>
-          {problemList.map(problem => (
-            <tr key={problem.id} className={problem.difficulty.toLowerCase()}>
+          {problemList.map((problem, index) => (
+            <tr
+              key={problem.id}
+              style={{
+                backgroundColor: index % 2 === 0 ? 'black' : 'grey',
+                color: 'white',
+              }}
+            >
               <td className="status solved"></td>
-              <td><Link to={`/problems/${problem.id}`} >{problem.title}</Link></td>
+              <td className="td-problm">
+                <Link to={`/problems/${problem.id}`} style={{ color: 'inherit' }}>
+                  {problem.title}
+                </Link>
+              </td>
               <td>{problem.difficulty}</td>
             </tr>
           ))}

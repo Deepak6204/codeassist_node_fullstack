@@ -1,7 +1,7 @@
 * {
   margin: 0;
   /* padding: 06; */
-  background-color: black;
+  /* background-color: black; */
   color: white;
   list-style: none;
   text-decoration: none;
@@ -590,20 +590,17 @@ color: rgb(0, 255, 166);
   transition: transform 0.3s ease;
 }
 #start-quiz-btn:hover {
-  transform: scale(1.12); 
+  transform: scale(1.12);
   cursor: pointer;
 }
 
 input[type="text"] {
-  width: 300px;
+  width: 200px;
   height: 40px;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-  margin-bottom: 5px;
-  margin-bottom: 30px;
-  margin-top: 20px;
 }
 input[type="text"]::placeholder {
   color: #999;
@@ -1529,6 +1526,7 @@ button {
 .input-edit {
   background-color: #fff; 
   color: black;
+  height: 20px;
 }
 .basic-info-value {
   color: #333;
@@ -1580,12 +1578,23 @@ button {
 }
 
 .headline-problem {
-  color: #fff;
+  color: black;
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 28px;
-  font-weight: 600;
-  background-color: #1e1e1e;
+  /* margin-bottom: 20px; */
+  /* font-size: 28px; */
+  /* font-weight: 600; */
+}
+.headline-problem input {
+  height: 4vh;
+  border: none;
+  border-color: transparent;
+  background-color: rgb(50, 50, 50);
+  width: 15vw;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
 }
 
 .problem-table {
@@ -1594,35 +1603,30 @@ button {
 }
 
 .problem-table thead th {
-  border-bottom: 2px solid #444;
-  padding-bottom: 12px;
-  padding-right: 5px;
-  font-weight: normal;
+  border-bottom: 1px solid #444;
+  padding: 10px 8px;
+  font-weight: 1.5rem;
   text-align: left;
   font-size: 1.3rem;
   color: #bbb;
 }
 
+.problem-table tbody td {
+  padding: 14px 10px;
+}
+
 .problem-table tbody tr:nth-child(odd) {
-  background-color: #2e2e2e; /* Grey */
+  background-color: rgb(22, 22, 22) !important;
+  color: white !important;
 }
 
 .problem-table tbody tr:nth-child(even) {
-  background-color: #1a1a1a; /* Black */
+  background-color: rgb(50, 50, 50) !important;
+  color: white !important;
 }
 
-.problem-table tbody td {
-  padding: 14px 10px;
-  border-bottom: 1px solid #444;
-}
 
-.problem-table tbody tr:hover {
-  background-color: unset; /* No change on hover */
-}
 
-.problem-table tbody tr:last-child td {
-  border-bottom: none;
-}
 
 .status {
   font-weight: bold;
