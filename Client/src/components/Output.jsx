@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Box, Button, Text, useToast } from "@chakra-ui/react";
+import { Box, Button, Text, useToast, ButtonGroup, Stack, Flex, background } from "@chakra-ui/react";
 import { executeCode } from "../api";
+import { Heading } from '@chakra-ui/react'
 
 const Output = ({ editorRef, language }) => {
   const toast = useToast();
@@ -32,9 +33,11 @@ const Output = ({ editorRef, language }) => {
   return (
     <Box w="100%">
       <Text mb={2} fontSize="lg">
-        Output
+        Output:
       </Text>
+      <ButtonGroup variant='outline' spacing='6'>
       <Button
+        spacing='6'
         variant="outline"
         colorScheme="green"
         mb={4}
@@ -43,6 +46,17 @@ const Output = ({ editorRef, language }) => {
       >
         Run Code
       </Button>
+      <Button
+        spacing='6'
+        variant="outline"
+        colorScheme="green"
+        mb={4}
+        isLoading={isLoading}
+        onClick={runCode}
+      >
+        Submit
+      </Button>
+      </ButtonGroup>
       <Box
         height="20vh"
         p={2}
@@ -51,9 +65,33 @@ const Output = ({ editorRef, language }) => {
         borderRadius={4}
         borderColor={isError ? "red.500" : "#333"}
       >
+      <Heading as='h6' size='xs' background="#e2e8f04d" padding="5px" m="-7px" borderRadius={4}>
+    Testcase
+  </Heading>
+  <Flex color='white' marginTop="20px">
+  <Text 
+    fontSize='xs' 
+    marginRight="30px" 
+    padding="5px" 
+    borderRadius={4} 
+    background="#e2e8f04d"
+    cursor="pointer"
+    >Case1</Text>
+  <Text fontSize='xs'
+    marginRight="30px" 
+    padding="5px" 
+    cursor="pointer"
+    className="btn-chakra"
+    >
+    Case2</Text>
+  <Text fontSize='xs'  
+    padding="5px"
+    cursor="pointer"
+   >Case3</Text>
+</Flex>
         {output
           ? output.map((line, i) => <Text key={i}>{line}</Text>)
-          : 'Click "Run Code" to see the output here'}
+          : ''}
       </Box>
     </Box>
   );

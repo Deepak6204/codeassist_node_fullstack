@@ -38,7 +38,6 @@ app.get('/', (req, res) => {
 });
 
 app.get('/problems', (req, res) => {
-    // const filePath = path.join(__dirname, 'question.json');
     
     fs.readFile("question.json", 'utf8', (err, data) => {
         if (err) {

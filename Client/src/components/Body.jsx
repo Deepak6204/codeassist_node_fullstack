@@ -14,7 +14,7 @@ const Body = () => {
                 <div className="body-section">
                     <div className="headline">
                         <HoverText/>
-                        <Link to="/quiz">
+                        <Link to="/problems">
                             <button className="button">Get Started</button>
                         </Link>
                     </div>

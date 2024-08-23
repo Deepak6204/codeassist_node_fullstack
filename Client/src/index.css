@@ -2171,7 +2171,9 @@ button {
 /* loder styles end */
 
 
-
+.btn-chakra:hover {
+  background-color: "#e2e8f04d"
+}
 
 /***** End problem *****/
 
