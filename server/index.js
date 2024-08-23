@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 5000;
+const fs= require('fs');
 
 app.use(express.static('public'));
 
@@ -42,7 +43,27 @@ app.get('/problems', (req, res) => {
 
 app.get('/problems/:id', (req, res) => {
     const problemId = req.params.id;
-    res.json(`Problem ${problemId}Problem statement for problem ${problemId} will be displayed here.`);
+    fs.readFile('question.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading the file:', err);
+            return;
+        }
+        const problemList = JSON.parse(data);
+        console.log(problemList.problems); 
+        console.log(problemList.problems.forEach(element => {
+            console.log(element)
+            
+        }))
+        const problem = problemList.problems.find(p => p.id === problemId);
+        console.log(problem)
+
+        if (problem) {
+            res.json(problem);
+        } else {
+            res.status(404).json({ message: 'Problem not found' });
+        }
+    });
+
 });
 
 app.get('/notes', (req, res) => {

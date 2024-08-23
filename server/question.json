@@ -1,1820 +1,1513 @@
 {
     "problems": [
         {
-            "name" : "Count Primes",
+            "id": "1",
+            "name": "Count Primes",
             "problem_statement": "Given an integer n, return the number of prime numbers that are strictly less than n.",
             "constraints": "0 <= n <= 5 * 10^6",
             "testcase": [
                 {
-                    "input": "n = 10",
+                    "input": "10",
                     "output": "4",
                     "explanation": "There are 4 prime numbers less than 10, they are 2, 3, 5, 7."
                 },
                 {
-                    "input": "n = 0",
+                    "input": "0",
                     "output": "0",
                     "explanation": "There are no prime numbers less than 0."
                 },
                 {
-                    "input": "n = 1",
+                    "input": "1",
                     "output": "0",
                     "explanation": "There are no prime numbers less than 1."
                 }
-            ]
+            ],
+            "java": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        int n = scanner.nextInt();\n        Solution solution = new Solution();\n        int result = solution.countPrimes(n);\n        System.out.println(result);\n    }\n}\n\nclass Solution {\n    public int countPrimes(int n) {\n        // Implement the function to count primes\n        return 0;\n    }\n}",
+            "cpp": "#include <iostream>\nusing namespace std;\n\nclass Solution {\npublic:\n    int countPrimes(int n) {\n        // Implement the function to count primes\n        return 0;\n    }\n};\n\nint main() {\n    int n;\n    cin >> n;\n    Solution solution;\n    int result = solution.countPrimes(n);\n    cout << result << endl;\n    return 0;\n}",
+            "oython": "class Solution:\n    def countPrimes(self, n: int) -> int:\n        # Implement the function to count primes\n        return 0\n\nif __name__ == '__main__':\n    n = int(input())\n    solution = Solution()\n    result = solution.countPrimes(n)\n    print(result)\n",
+            "c": "#include <stdio.h>\n\nint countPrimes(int n) {\n    // Implement the function to count primes\n    return 0;\n}\n\nint main() {\n    int n;\n    scanf(\"%d\", &n);\n    int result = countPrimes(n);\n    printf(\"%d\\n\", result);\n    return 0;\n}"
         },    
         {
-            "name" : "Product of Array except self",
+            "id": "2",
+            "name": "Product of Array except self",
             "problem_statement": "Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i]. The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer. You must write an algorithm that runs in O(n) time and without using the division operation.",
             "constraints": "2 <= nums.length <= 10^5\n-30 <= nums[i] <= 30\nThe product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.",
             "testcase": [
                 {
-                    "input": "nums = [1,2,3,4]",
+                    "input": "1,2,3,4",
                     "output": "[24,12,8,6]",
                     "explanation": "The product of all elements except nums[0] (1) is 24, except nums[1] (2) is 12, except nums[2] (3) is 8, and except nums[3] (4) is 6."
                 },
                 {
-                    "input": "nums = [-1,1,0,-3,3]",
+                    "input": "-1,1,0,-3,3",
                     "output": "[0,0,9,0,0]",
                     "explanation": "The product of all elements except nums[2] (0) is 9. For other indices, the result is 0 because multiplying by 0 yields 0."
-                }   
-            ]
-        },
-        {
-            "name" : "Range sum query 2D - Immutable",
-            "problem_statement": "Given a 2D matrix matrix, handle multiple queries to calculate the sum of the elements inside the rectangle defined by its upper left corner (row1, col1) and lower right corner (row2, col2). Implement the NumMatrix class that supports fast queries.",
-            "constraints": "m == matrix.length\nn == matrix[i].length\n1 <= m, n <= 200\n-10^4 <= matrix[i][j] <= 10^4\n0 <= row1 <= row2 < m\n0 <= col1 <= col2 < n\nAt most 10^4 calls will be made to sumRegion.",
-            "testcase": [
-                {
-                    "input": "[\"NumMatrix\", \"sumRegion\", \"sumRegion\", \"sumRegion\"]\n[[[[3, 0, 1, 4, 2], [5, 6, 3, 2, 1], [1, 2, 0, 1, 5], [4, 1, 0, 1, 7], [1, 0, 3, 0, 5]]], [2, 1, 4, 3], [1, 1, 2, 2], [1, 2, 2, 4]]",
-                    "output": "[null, 8, 11, 12]",
-                    "explanation": "NumMatrix numnew NumMatrix(matrix). The sum of the elements inside the rectangle from (2,1) to (4,3) is 8. The sum of elements from (1,1) to (2,2) is 11. The sum of elements from (1,2) to (2,4) is 12."
                 }
-            ]
+            ],
+            "java": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        int n = scanner.nextInt();\n        int[] nums = new int[n];\n        for (int i = 0; i < n; i++) {\n            nums[i] = scanner.nextInt();\n        }\n        Solution solution = new Solution();\n        int[] result = solution.productExceptSelf(nums);\n        System.out.println(Arrays.toString(result));\n    }\n}\n\nclass Solution {\n    public int[] productExceptSelf(int[] nums) {\n        // Implement the function to calculate product of array except self\n        return new int[nums.length];\n    }\n}",
+            "cpp": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> productExceptSelf(vector<int>& nums) {\n        // Implement the function to calculate product of array except self\n        return vector<int>(nums.size(), 1);\n    }\n};\n\nint main() {\n    int n;\n    cin >> n;\n    vector<int> nums(n);\n    for (int i = 0; i < n; i++) {\n        cin >> nums[i];\n    }\n    Solution solution;\n    vector<int> result = solution.productExceptSelf(nums);\n    for (int num : result) {\n        cout << num << \" \";\n    }\n    cout << endl;\n    return 0;\n}",
+            "oython": "class Solution:\n    def productExceptSelf(self, nums):\n        # Implement the function to calculate product of array except self\n        return [1] * len(nums)\n\nif __name__ == '__main__':\n    n = int(input())\n    nums = list(map(int, input().split()))\n    solution = Solution()\n    result = solution.productExceptSelf(nums)\n    print(result)\n",
+            "c": "#include <stdio.h>\n\nvoid productExceptSelf(int* nums, int numsSize, int* returnArray) {\n    // Implement the function to calculate product of array except self\n    for (int i = 0; i < numsSize; i++) {\n        returnArray[i] = 1;\n    }\n}\n\nint main() {\n    int n;\n    scanf(\"%d\", &n);\n    int nums[n];\n    for (int i = 0; i < n; i++) {\n        scanf(\"%d\", &nums[i]);\n    }\n    int result[n];\n    productExceptSelf(nums, n, result);\n    for (int i = 0; i < n; i++) {\n        printf(\"%d \", result[i]);\n    }\n    printf(\"\\n\");\n    return 0;\n}"
         },
         {
+            "id": "2",
             "name" : "Plus One",
             "problem_statement": "You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's. Increment the large integer by one and return the resulting array of digits.",
             "constraints": "1 <= digits.length <= 100\n0 <= digits[i] <= 9\nThe digits array does not contain any leading 0's.",
             "testcase": [
                 {
-                    "input": "digits = [1,2,3]",
-                    "output": "[1,2,4]",
+                    "input": "1,2,3",
+                    "output": "[1,2,4",
                     "explanation": "The array represents the integer 123. Incrementing by one gives 123 + 1 = 124. Thus, the result should be [1,2,4]."
                 },
                 {
-                    "input": "digits = [4,3,2,1]",
-                    "output": "[4,3,2,2]",
+                    "input": "4,3,2,",
+                    "output": "[4,3,2,2",
                     "explanation": "The array represents the integer 4321. Incrementing by one gives 4321 + 1 = 4322. Thus, the result should be [4,3,2,2]."
                 },
                 {
-                    "input": "digits = [9]",
-                    "output": "[1,0]",
+                    "input": "9",
+                    "output": "[1,0",
                     "explanation": "The array represents the integer 9. Incrementing by one gives 9 + 1 = 10. Thus, the result should be [1,0]."
                 }
             ]
         },
         {
-            "name" : "Mulitply Strings",
+            "id": "3",
+            "name": "Multiply Strings",
             "problem_statement": "Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string. You must not use any built-in BigInteger library or convert the inputs to integers directly.",
             "constraints": "1 <= num1.length, num2.length <= 200\nnum1 and num2 consist of digits only.\nBoth num1 and num2 do not contain any leading zero, except the number 0 itself.",
             "testcase": [
                 {
-                    "input": "num1 = \"2\", num2 = \"3\"",
-                    "output": "\"6\"",
+                    "input": "2,3",
+                    "output": "6",
                     "explanation": "The product of 2 and 3 is 6."
                 },
                 {
-                    "input": "num1 = \"123\", num2 = \"456\"",
-                    "output": "\"56088\""
+                    "input": "123,456",
+                    "output": "56088"
                 },
                 {
-                    "input": "num1 = \"0\", num2 = \"0\"",
-                    "output": "\"0\""
+                    "input": "0,0",
+                    "output": "0"
                 },
                 {
-                    "input": "num1 = \"999\", num2 = \"999\"",
-                    "output": "\"998001\""
+                    "input": "999,999",
+                    "output": "998001"
                 },
                 {
-                    "input": "num1 = \"1\", num2 = \"987654321\"",
-                    "output": "\"987654321\""
+                    "input": "1,987654321",
+                    "output": "987654321"
                 },
                 {
-                    "input": "num1 = \"100\", num2 = \"1000\"",
-                    "output": "\"100000\""
-                },
-                {
-                    "input": "num1 = \"5000\", num2 = \"5000\"",
-                    "output": "\"25000000\""
-                },
-                {
-                    "input": "num1 = \"999999\", num2 = \"999999\"",
-                    "output": "\"999998000001\""
-                },
-                {
-                    "input": "num1 = \"25\", num2 = \"4\"",
-                    "output": "\"100\""
-                },
-                {
-                    "input": "num1 = \"101\", num2 = \"101\"",
-                    "output": "\"10201\""
-                },
-                {
-                    "input": "num1 = \"12345\", num2 = \"67890\"",
-                    "output": "\"838102050\""
-                },
-                {
-                    "input": "num1 = \"10000\", num2 = \"10000\"",
-                    "output": "\"100000000\""
-                },
-                {
-                    "input": "num1 = \"12\", num2 = \"12\"",
-                    "output": "\"144\""
-                },
-                {
-                    "input": "num1 = \"987654321\", num2 = \"987654321\"",
-                    "output": "\"975461057789971041\""
-                },
-                {
-                    "input": "num1 = \"123456789\", num2 = \"987654321\"",
-                    "output": "\"121932631112635269\""
-                },
-                {
-                    "input": "num1 = \"111\", num2 = \"111\"",
-                    "output": "\"12321\""
-                },
-                {
-                    "input": "num1 = \"250\", num2 = \"400\"",
-                    "output": "\"100000\""
-                },
-                {
-                    "input": "num1 = \"123456789012345678901234567890\", num2 = \"987654321098765432109876543210\"",
-                    "output": "\"12193263135650053159106843158177106934720316911263526900\""
-                },
-                {
-                    "input": "num1 = \"20\", num2 = \"30\"",
-                    "output": "\"600\""
-                },
-                {
-                    "input": "num1 = \"50\", num2 = \"70\"",
-                    "output": "\"3500\""
-                },
-                {
-                    "input": "num1 = \"9999\", num2 = \"8888\"",
-                    "output": "\"88871112\""
-                },
-                {
-                    "input": "num1 = \"123456\", num2 = \"654321\"",
-                    "output": "\"80779853376\""
-                },
-                {
-                    "input": "num1 = \"55555\", num2 = \"44444\"",
-                    "output": "\"2469135800\""
-                },
-                {
-                    "input": "num1 = \"987654321\", num2 = \"123456789\"",
-                    "output": "\"121932631112635269\""
-                },
-                {
-                    "input": "num1 = \"99999\", num2 = \"10001\"",
-                    "output": "\"1000099999\""
-                },
-                {
-                    "input": "num1 = \"87654321\", num2 = \"12345678\"",
-                    "output": "\"1082152022374638\""
-                },
-                {
-                    "input": "num1 = \"11111\", num2 = \"22222\"",
-                    "output": "\"2468642\""
-                },
-                {
-                    "input": "num1 = \"30000\", num2 = \"20000\"",
-                    "output": "\"600000000\""
-                },
-                {
-                    "input": "num1 = \"789\", num2 = \"456\"",
-                    "output": "\"359784\""
-                },
-                {
-                    "input": "num1 = \"102030\", num2 = \"405060\"",
-                    "output": "\"41312131800\""
-                },
-                {
-                    "input": "num1 = \"101010\", num2 = \"202020\"",
-                    "output": "\"2040800400\""
-                },
-                {
-                    "input": "num1 = \"65432\", num2 = \"12345\"",
-                    "output": "\"808026040\""
-                },
-                {
-                    "input": "num1 = \"8000\", num2 = \"9000\"",
-                    "output": "\"72000000\""
-                },
-                {
-                    "input": "num1 = \"10\", num2 = \"10\"",
-                    "output": "\"100\""
-                },
-                {
-                    "input": "num1 = \"1\", num2 = \"1000000\"",
-                    "output": "\"1000000\""
-                },
-                {
-                    "input": "num1 = \"7777\", num2 = \"8888\"",
-                    "output": "\"69129736\""
-                },
-                {
-                    "input": "num1 = \"54321\", num2 = \"12345\"",
-                    "output": "\"670592745\""
-                },
-                {
-                    "input": "num1 = \"50000\", num2 = \"40000\"",
-                    "output": "\"2000000000\""
-                },
-                {
-                    "input": "num1 = \"3000\", num2 = \"7000\"",
-                    "output": "\"21000000\""
-                },
-                {
-                    "input": "num1 = \"654321\", num2 = \"123456\"",
-                    "output": "\"80779853376\""
-                },
-                {
-                    "input": "num1 = \"99999999\", num2 = \"1\"",
-                    "output": "\"99999999\""
-                },
-                {
-                    "input": "num1 = \"100000\", num2 = \"10000\"",
-                    "output": "\"1000000000\""
-                },
-                {
-                    "input": "num1 = \"55555\", num2 = \"55555\"",
-                    "output": "\"3086428025\""
-                },
-                {
-                    "input": "num1 = \"1010101\", num2 = \"1010101\"",
-                    "output": "\"1020303030201\""
-                },
-                {
-                    "input": "num1 = \"90909\", num2 = \"10101\"",
-                    "output": "\"918281809\""
-                },
-                {
-                    "input": "num1 = \"100000000\", num2 = \"100000000\"",
-                    "output": "\"10000000000000000\""
-                },
-                {
-                    "input": "num1 = \"20000\", num2 = \"20000\"",
-                    "output": "\"400000000\""
+                    "input": "100,1000",
+                    "output": "100000"
                 }
-            ]
+            ],
+            "java": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        String num1 = scanner.next();\n        String num2 = scanner.next();\n        Solution solution = new Solution();\n        String result = solution.multiply(num1, num2);\n        System.out.println(result);\n    }\n}\n\nclass Solution {\n    public String multiply(String num1, String num2) {\n        // Implement the function to multiply strings\n        return \"\";\n    }\n}",
+            "cpp": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Solution {\npublic:\n    string multiply(string num1, string num2) {\n        // Implement the function to multiply strings\n        return \"\";\n    }\n};\n\nint main() {\n    string num1, num2;\n    cin >> num1 >> num2;\n    Solution solution;\n    string result = solution.multiply(num1, num2);\n    cout << result << endl;\n    return 0;\n}",
+            "oython": "class Solution:\n    def multiply(self, num1, num2):\n        # Implement the function to multiply strings\n        return \"\"\n\nif __name__ == '__main__':\n    num1 = input()\n    num2 = input()\n    solution = Solution()\n    result = solution.multiply(num1, num2)\n    print(result)\n",
+            "c": "#include <stdio.h>\n#include <string.h>\n\nvoid multiply(char* num1, char* num2, char* result) {\n    // Implement the function to multiply strings\n    strcpy(result, \"\");\n}\n\nint main() {\n    char num1[201], num2[201];\n    scanf(\"%200s %200s\", num1, num2);\n    char result[402];\n    multiply(num1, num2, result);\n    printf(\"%s\\n\", result);\n    return 0;\n}"
         },
         {
+            "id": "4",
             "name" : "Pow(x,n)",
             "problem_statement": "Implement pow(x, n), which calculates x raised to the power n (i.e., x^n).",
             "constraints": "-100.0 < x < 100.0\n-231 <= n <= 231-1\nn is an integer.",
             "testcase": [
                 {
-                    "input": "x = 2.00000, n = 10",
+                    "input": "2.00000, 10",
                     "output": "1024.00000"
                 },
                 {
-                    "input": "x = 2.10000, n = 3",
+                    "input": "2.10000, 3",
                     "output": "9.26100"
                 },
                 {
-                    "input": "x = 2.00000, n = -2",
+                    "input": "2.00000, -2",
                     "output": "0.25000",
                     "explanation": "2^(-2) = 1/2^2 = 1/4 = 0.25"
                 },
                 {
-                    "input": "x = -2.00000, n = 3",
+                    "input": "-2.00000, 3",
                     "output": "-8.00000"
                 },
                 {
-                    "input": "x = 0.00001, n = 2147483647",
+                    "input": "0.00001, 2147483647",
                     "output": "0.00000"
                 },
                 {
-                    "input": "x = 1.00000, n = -2147483648",
+                    "input": "1.00000, -2147483648",
                     "output": "1.00000"
                 },
                 {
-                    "input": "x = -1.00000, n = -2147483648",
+                    "input": "-1.00000, -2147483648",
                     "output": "1.00000"
                 },
                 {
-                    "input": "x = 0.00001, n = -2147483648",
+                    "input": "0.00001, -2147483648",
                     "output": "10000000000.00000"
                 },
                 {
-                    "input": "x = 1.50000, n = 0",
+                    "input": "1.50000, 0",
                     "output": "1.00000"
                 },
                 {
-                    "input": "x = 100.00000, n = 0",
+                    "input": "100.00000, 0",
                     "output": "1.00000"
                 },
                 {
-                    "input": "x = -100.00000, n = 1",
+                    "input": "-100.00000, 1",
                     "output": "-100.00000"
                 },
                 {
-                    "input": "x = -2.00000, n = 10",
+                    "input": "-2.00000, 10",
                     "output": "1024.00000"
                 },
                 {
-                    "input": "x = -2.50000, n = 5",
+                    "input": "-2.50000, 5",
                     "output": "-97.65625"
                 },
                 {
-                    "input": "x = 0.50000, n = 5",
+                    "input": "0.50000, 5",
                     "output": "0.03125"
                 },
                 {
-                    "input": "x = 2.00000, n = 1",
+                    "input": "2.00000, 1",
                     "output": "2.00000"
                 },
                 {
-                    "input": "x = 2.00000, n = -3",
+                    "input": "2.00000, -3",
                     "output": "0.12500"
                 },
                 {
-                    "input": "x = 0.10000, n = 10",
+                    "input": "0.10000, 10",
                     "output": "0.00001"
                 },
                 {
-                    "input": "x = 10.00000, n = -1",
+                    "input": "10.00000, -1",
                     "output": "0.10000"
                 },
                 {
-                    "input": "x = 2.71828, n = 2",
+                    "input": "2.71828, 2",
                     "output": "7.38906"
                 },
                 {
-                    "input": "x = 5.00000, n = 3",
+                    "input": "5.00000, 3",
                     "output": "125.00000"
                 },
                 {
-                    "input": "x = 0.00001, n = 2147483646",
+                    "input": "0.00001, 2147483646",
                     "output": "0.00000"
                 },
                 {
-                    "input": "x = 100.00000, n = 2",
+                    "input": "100.00000, 2",
                     "output": "10000.00000"
                 },
                 {
-                    "input": "x = 3.14159, n = 2",
+                    "input": "3.14159, 2",
                     "output": "9.86960"
                 },
                 {
-                    "input": "x = 1.41421, n = 2",
+                    "input": "1.41421, 2",
                     "output": "2.00000"
                 },
                 {
-                    "input": "x = 2.00000, n = -3",
+                    "input": "2.00000, -3",
                     "output": "0.12500"
                 },
                 {
-                    "input": "x = 1.50000, n = 3",
+                    "input": "1.50000, 3",
                     "output": "3.37500"
                 },
                 {
-                    "input": "x = 1.00001, n = 2147483647",
+                    "input": "1.00001, 2147483647",
                     "output": "1.00001"
                 },
                 {
-                    "input": "x = 0.99999, n = 2147483647",
+                    "input": "0.99999, 2147483647",
                     "output": "0.99999"
                 },
                 {
-                    "input": "x = -2.00000, n = 4",
+                    "input": "-2.00000, 4",
                     "output": "16.00000"
                 },
                 {
-                    "input": "x = -2.00000, n = 2",
+                    "input": "-2.00000, 2",
                     "output": "4.00000"
                 },
                 {
-                    "input": "x = 0.00001, n = -1",
+                    "input": "0.00001, -1",
                     "output": "100000.00000"
                 },
                 {
-                    "input": "x = 100.00000, n = -2",
+                    "input": "100.00000, -2",
                     "output": "0.00010"
                 },
                 {
-                    "input": "x = 2.50000, n = 3",
+                    "input": "2.50000, 3",
                     "output": "15.62500"
                 },
                 {
-                    "input": "x = 0.00001, n = -1000000000",
+                    "input": "0.00001, -1000000000",
                     "output": "100000000000000.00000"
                 },
                 {
-                    "input": "x = -2.00000, n = 1000",
+                    "input": "-2.00000, 1000",
                     "output": "1.07151e+301"
                 },
                 {
-                    "input": "x = 1.00000, n = 2147483647",
+                    "input": "1.00000, 2147483647",
                     "output": "1.00000"
                 },
                 {
-                    "input": "x = 3.00000, n = 7",
+                    "input": "3.00000, 7",
                     "output": "2187.00000"
                 },
                 {
-                    "input": "x = 2.50000, n = 4",
+                    "input": "2.50000, 4",
                     "output": "39.06250"
                 },
                 {
-                    "input": "x = 5.00000, n = -3",
+                    "input": "5.00000, -3",
                     "output": "0.00800"
                 },
                 {
-                    "input": "x = 0.33333, n = 3",
+                    "input": "0.33333, 3",
                     "output": "0.03704"
                 },
                 {
-                    "input": "x = 0.00001, n = 1",
+                    "input": "0.00001, 1",
                     "output": "0.00001"
                 },
                 {
-                    "input": "x = 10.00000, n = -3",
+                    "input": "10.00000, -3",
                     "output": "0.00100"
                 },
                 {
-                    "input": "x = 2.71828, n = -1",
+                    "input": "2.71828, -1",
                     "output": "0.36788"
                 },
                 {
-                    "input": "x = 7.00000, n = 2",
+                    "input": "7.00000, 2",
                     "output": "49.00000"
                 },
                 {
-                    "input": "x = 2.00000, n = 4",
+                    "input": "2.00000, 4",
                     "output": "16.00000"
                 },
                 {
-                    "input": "x = 0.50000, n = 10",
+                    "input": "0.50000, 10",
                     "output": "0.00098"
                 },
                 {
-                    "input": "x = 0.33333, n = -2",
+                    "input": "0.33333, -2",
                     "output": "9.00000"
                 },
                 {
-                    "input": "x = 5.00000, n = 5",
+                    "input": "5.00000, 5",
                     "output": "3125.00000"
                 },
                 {
-                    "input": "x = 1.00000, n = 1000000000",
+                    "input": "1.00000, 1000000000",
                     "output": "1.00000"
                 }
             ]
         },
         {
+            "id": "5",
             "name" : "Majority Element I",
             "problem_statement": "Given an array nums of size n, return the majority element. The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.",
             "constraints": "n == nums.length\n1 <= n <= 5 * 10^4",
             "testcase": [
                 {
-                    "input": "nums = [3,2,3]",
+                    "input": "3,2,3",
                     "output": "3"
                 },
                 {
-                    "input": "nums = [2,2,1,1,1,2,2]",
+                    "input": "2,2,1,1,1,2,2",
                     "output": "2"
                 },
                 {
-                    "input": "nums = [1]",
+                    "input": "1",
                     "output": "1",
                     "explanation": "With only one element in the array, it is the majority element."
                 },
                 {
-                    "input": "nums = [1,1,1,1,1,1,2,3,4,5]",
+                    "input": "1,1,1,1,1,1,2,3,4,5",
                     "output": "1"
                 },
                 {
-                    "input": "nums = [2,2,2,2,3,3]",
+                    "input": "2,2,2,2,3,3",
                     "output": "2"
                 },
                 {
-                    "input": "nums = [5,5,5,5,1,1,1,1,1]",
+                    "input": "5,5,5,5,1,1,1,1,1",
                     "output": "1"
                 },
                 {
-                    "input": "nums = [10,9,9,9,9]",
+                    "input": "10,9,9,9,9",
                     "output": "9"
                 },
                 {
-                    "input": "nums = [7,7,8,8,7,7,7]",
+                    "input": "7,7,8,8,7,7,7",
                     "output": "7"
                 },
                 {
-                    "input": "nums = [1,2,3,4,4,4,4]",
+                    "input": "1,2,3,4,4,4,4",
                     "output": "4"
                 },
                 {
-                    "input": "nums = [100,101,100,101,100]",
+                    "input": "100,101,100,101,100",
                     "output": "100"
                 },
                 {
-                    "input": "nums = [4,4,4,5,5,5,4]",
+                    "input": "4,4,4,5,5,5,4",
                     "output": "4"
                 },
                 {
-                    "input": "nums = [0,0,1,1,1,0,0,0,0]",
+                    "input": "0,0,1,1,1,0,0,0,0",
                     "output": "0"
                 },
                 {
-                    "input": "nums = [10,10,10,20,20]",
+                    "input": "10,10,10,20,20",
                     "output": "10"
                 },
                 {
-                    "input": "nums = [6,6,6,6,7,8,9]",
+                    "input": "6,6,6,6,7,8,9",
                     "output": "6"
                 },
                 {
-                    "input": "nums = [2,2,2,2,3,4,5]",
+                    "input": "2,2,2,2,3,4,5",
                     "output": "2"
                 },
                 {
-                    "input": "nums = [9,8,9,8,9,8,9,8,9]",
+                    "input": "9,8,9,8,9,8,9,8,9",
                     "output": "9"
                 },
                 {
-                    "input": "nums = [1,2,1,1,1]",
+                    "input": "1,2,1,1,1",
                     "output": "1"
                 },
                 {
-                    "input": "nums = [4,4,5,4,5,4,4]",
+                    "input": "4,4,5,4,5,4,4",
                     "output": "4"
                 },
                 {
-                    "input": "nums = [3,3,3,2,2,2,2,2]",
+                    "input": "3,3,3,2,2,2,2,2",
                     "output": "2"
                 },
                 {
-                    "input": "nums = [6,7,6,7,6,7,6]",
+                    "input": "6,7,6,7,6,7,6",
                     "output": "6"
                 },
                 {
-                    "input": "nums = [5,5,5,6,6,5,6,5,6,5]",
+                    "input": "5,5,5,6,6,5,6,5,6,5",
                     "output": "5"
                 },
                 {
-                    "input": "nums = [3,3,3,4,4,4,3]",
+                    "input": "3,3,3,4,4,4,3",
                     "output": "3"
                 },
                 {
-                    "input": "nums = [0,1,0,1,0,1,0]",
+                    "input": "0,1,0,1,0,1,0",
                     "output": "0"
                 },
                 {
-                    "input": "nums = [7,7,7,8,8,8,8]",
+                    "input": "7,7,7,8,8,8,8",
                     "output": "8"
                 },
                 {
-                    "input": "nums = [12,12,13,12,13,12,12]",
+                    "input": "12,12,13,12,13,12,12",
                     "output": "12"
                 },
                 {
-                    "input": "nums = [5,5,6,6,7,7,7,7,7]",
+                    "input": "5,5,6,6,7,7,7,7,7",
                     "output": "7"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,6,7,8,8,8,8,8]",
+                    "input": "1,2,3,4,5,6,7,8,8,8,8,8",
                     "output": "8"
                 },
                 {
-                    "input": "nums = [1,1,1,1,1,2,3,4,5]",
+                    "input": "1,1,1,1,1,2,3,4,5",
                     "output": "1"
                 },
                 {
-                    "input": "nums = [9,9,8,8,8,8,8,8]",
+                    "input": "9,9,8,8,8,8,8,8",
                     "output": "8"
                 },
                 {
-                    "input": "nums = [3,3,4,4,3,3]",
+                    "input": "3,3,4,4,3,3",
                     "output": "3"
                 },
                 {
-                    "input": "nums = [2,2,3,3,2,3,2]",
+                    "input": "2,2,3,3,2,3,2",
                     "output": "2"
                 },
                 {
-                    "input": "nums = [6,6,7,7,7,7,7]",
+                    "input": "6,6,7,7,7,7,7",
                     "output": "7"
                 },
                 {
-                    "input": "nums = [4,4,4,4,5,5,6,6,7]",
+                    "input": "4,4,4,4,5,5,6,6,7",
                     "output": "4"
                 },
                 {
-                    "input": "nums = [0,0,0,0,1,1,2,2]",
+                    "input": "0,0,0,0,1,1,2,2",
                     "output": "0"
                 },
                 {
-                    "input": "nums = [3,3,3,3,3,3,3]",
+                    "input": "3,3,3,3,3,3,3",
                     "output": "3"
                 },
                 {
-                    "input": "nums = [2,2,2,2,2,3,3]",
+                    "input": "2,2,2,2,2,3,3",
                     "output": "2"
                 },
                 {
-                    "input": "nums = [1,1,1,1,2,2,2,2]",
+                    "input": "1,1,1,1,2,2,2,2",
                     "output": "1"
                 },
                 {
-                    "input": "nums = [5,5,5,5,6,6,7,7]",
+                    "input": "5,5,5,5,6,6,7,7",
                     "output": "5"
                 },
                 {
-                    "input": "nums = [7,7,7,7,8,8,9,9]",
+                    "input": "7,7,7,7,8,8,9,9",
                     "output": "7"
                 },
                 {
-                    "input": "nums = [6,6,7,7,7,6,7]",
+                    "input": "6,6,7,7,7,6,7",
                     "output": "7"
                 },
                 {
-                    "input": "nums = [0,0,0,0,0,1,2,3]",
+                    "input": "0,0,0,0,0,1,2,3",
                     "output": "0"
                 },
                 {
-                    "input": "nums = [4,4,4,5,5,4]",
+                    "input": "4,4,4,5,5,4",
                     "output": "4"
                 },
                 {
-                    "input": "nums = [1,2,3,4,4,4,4,4]",
+                    "input": "1,2,3,4,4,4,4,4",
                     "output": "4"
                 },
                 {
-                    "input": "nums = [10,10,10,10,11,11]",
+                    "input": "10,10,10,10,11,11",
                     "output": "10"
                 },
                 {
-                    "input": "nums = [7,7,7,8,8,7]",
+                    "input": "7,7,7,8,8,7",
                     "output": "7"
                 },
                 {
-                    "input": "nums = [2,2,3,3,4,4,4,4]",
+                    "input": "2,2,3,3,4,4,4,4",
                     "output": "4"
                 }
             ]
         },
         {
+            "id": "6",
             "name": "Majority Element II", 
             "problem_statement": "Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.",
             "constraints": "1 <= nums.length <= 5 * 10^4\n-10^9 <= nums[i] <= 10^9",
             "testcase": [
                 {
-                    "input": "nums = [3,2,3]",
+                    "input": "3,2,3",
                     "output": "[3]"
                 },
                 {
-                    "input": "nums = [1]",
+                    "input": "1",
                     "output": "[1]"
                 },
                 {
-                    "input": "nums = [1,2]",
+                    "input": "1,2",
                     "output": "[1,2]"
                 },
                 {
-                    "input": "nums = [1,1,1,2,2,2,3,3,3,3,3]",
+                    "input": "1,1,1,2,2,2,3,3,3,3,3",
                     "output": "[1,3]"
                 },
                 {
-                    "input": "nums = [4,4,4,5,5,5,6,7,8,8,8]",
+                    "input": "4,4,4,5,5,5,6,7,8,8,8",
                     "output": "[4,8]"
                 },
                 {
-                    "input": "nums = [1,1,2,2,3,3,4,4,5,5,6]",
+                    "input": "1,1,2,2,3,3,4,4,5,5,6",
                     "output": "[1,2,3,4,5]"
                 },
                 {
-                    "input": "nums = [10,10,10,11,11,11,12,12]",
+                    "input": "10,10,10,11,11,11,12,12",
                     "output": "[10,11]"
                 },
                 {
-                    "input": "nums = [7,7,7,8,8,9,9,9,9,10]",
+                    "input": "7,7,7,8,8,9,9,9,9,10",
                     "output": "[7,9]"
                 },
                 {
-                    "input": "nums = [0,0,0,1,1,1,2,2,2,3]",
+                    "input": "0,0,0,1,1,1,2,2,2,3",
                     "output": "[0,1,2]"
                 },
                 {
-                    "input": "nums = [9,9,9,9,10,10,10,10,10,11]",
+                    "input": "9,9,9,9,10,10,10,10,10,11",
                     "output": "[10]"
                 },
                 {
-                    "input": "nums = [5,5,5,6,6,6,7,7,8]",
+                    "input": "5,5,5,6,6,6,7,7,8",
                     "output": "[5,6]"
                 },
                 {
-                    "input": "nums = [3,3,4,4,5,5,6,6,7,7,8,8,9,9]",
+                    "input": "3,3,4,4,5,5,6,6,7,7,8,8,9,9",
                     "output": "[3,4,5,6,7,8,9]"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,6,7,8,9,10,11]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11",
                     "output": "[1,2,3,4,5,6,7,8,9,10,11]"
                 },
                 {
-                    "input": "nums = [2,2,3,3,4,4,4,4]",
+                    "input": "2,2,3,3,4,4,4,4",
                     "output": "[4]"
                 },
                 {
-                    "input": "nums = [6,6,7,7,7,7,8,8,8]",
+                    "input": "6,6,7,7,7,7,8,8,8",
                     "output": "[7,8]"
                 },
                 {
-                    "input": "nums = [0,0,0,1,1,1,2,2,2,2,3,3]",
+                    "input": "0,0,0,1,1,1,2,2,2,2,3,3",
                     "output": "[0,1,2]"
                 },
                 {
-                    "input": "nums = [10,10,10,10,11,11,11,11,12]",
+                    "input": "10,10,10,10,11,11,11,11,12",
                     "output": "[10,11]"
                 },
                 {
-                    "input": "nums = [5,5,5,6,6,6,7,7,7,8]",
+                    "input": "5,5,5,6,6,6,7,7,7,8",
                     "output": "[5,6,7]"
                 },
                 {
-                    "input": "nums = [2,2,2,3,3,3,4,4,4,4]",
+                    "input": "2,2,2,3,3,3,4,4,4,4",
                     "output": "[2,4]"
                 },
                 {
-                    "input": "nums = [1,1,2,2,2,3,3,3,4,4]",
+                    "input": "1,1,2,2,2,3,3,3,4,4",
                     "output": "[2,3]"
                 },
                 {
-                    "input": "nums = [7,7,8,8,8,8,9,9,9]",
+                    "input": "7,7,8,8,8,8,9,9,9",
                     "output": "[8,9]"
                 },
                 {
-                    "input": "nums = [6,6,6,7,7,8,8,8,8]",
+                    "input": "6,6,6,7,7,8,8,8,8",
                     "output": "[6,8]"
                 },
                 {
-                    "input": "nums = [3,3,4,4,4,5,5,6]",
+                    "input": "3,3,4,4,4,5,5,6",
                     "output": "[4]"
                 },
                 {
-                    "input": "nums = [9,9,9,10,10,10,11,11,12]",
+                    "input": "9,9,9,10,10,10,11,11,12",
                     "output": "[9,10]"
                 },
                 {
-                    "input": "nums = [2,2,3,3,3,4,4,4]",
+                    "input": "2,2,3,3,3,4,4,4",
                     "output": "[3,4]"
                 },
                 {
-                    "input": "nums = [1,1,1,2,2,2,3,3,4,4]",
+                    "input": "1,1,1,2,2,2,3,3,4,4",
                     "output": "[1,2]"
                 },
                 {
-                    "input": "nums = [10,10,10,11,11,12,12,12]",
+                    "input": "10,10,10,11,11,12,12,12",
                     "output": "[10,12]"
                 },
                 {
-                    "input": "nums = [0,0,0,1,1,1,2,2,2,3,4,4]",
+                    "input": "0,0,0,1,1,1,2,2,2,3,4,4",
                     "output": "[0,1,2]"
                 },
                 {
-                    "input": "nums = [5,5,6,6,7,7,7,7,8,8]",
+                    "input": "5,5,6,6,7,7,7,7,8,8",
                     "output": "[7]"
                 },
                 {
-                    "input": "nums = [2,2,3,3,3,4,4,4,5,5]",
+                    "input": "2,2,3,3,3,4,4,4,5,5",
                     "output": "[3,4]"
                 },
                 {
-                    "input": "nums = [6,6,6,7,7,7,7,8,8,8,8]",
+                    "input": "6,6,6,7,7,7,7,8,8,8,8",
                     "output": "[6,8]"
                 },
                 {
-                    "input": "nums = [1,1,1,2,2,3,3,3,4,4,4,4]",
+                    "input": "1,1,1,2,2,3,3,3,4,4,4,4",
                     "output": "[1,4]"
                 },
                 {
-                    "input": "nums = [9,9,9,10,10,10,10,11,11,11]",
+                    "input": "9,9,9,10,10,10,10,11,11,11",
                     "output": "[10]"
                 },
                 {
-                    "input": "nums = [8,8,8,9,9,9,10,10,10]",
+                    "input": "8,8,8,9,9,9,10,10,10",
                     "output": "[8,9,10]"
                 },
                 {
-                    "input": "nums = [2,2,3,3,4,4,4,5,5,6]",
+                    "input": "2,2,3,3,4,4,4,5,5,6",
                     "output": "[4]"
                 },
                 {
-                    "input": "nums = [1,1,1,2,2,3,3,3,4]",
+                    "input": "1,1,1,2,2,3,3,3,4",
                     "output": "[1,3]"
                 },
                 {
-                    "input": "nums = [6,6,7,7,8,8,9,9]",
+                    "input": "6,6,7,7,8,8,9,9",
                     "output": "[6,7,8,9]"
                 },
                 {
-                    "input": "nums = [5,5,5,6,6,7,7,7,7]",
+                    "input": "5,5,5,6,6,7,7,7,7",
                     "output": "[5,7]"
                 },
                 {
-                    "input": "nums = [0,0,1,1,1,2,2,3,3]",
+                    "input": "0,0,1,1,1,2,2,3,3",
                     "output": "[1]"
                 },
                 {
-                    "input": "nums = [4,4,4,5,5,5,6,6,7]",
+                    "input": "4,4,4,5,5,5,6,6,7",
                     "output": "[4,5]"
                 },
                 {
-                    "input": "nums = [2,2,3,3,3,4,4,5]",
+                    "input": "2,2,3,3,3,4,4,5",
                     "output": "[3]"
                 }
             ]
         },
         {
+            "id": "7",
             "name" : "Bull and Cows",
             "problem_statement": "You are playing the Bulls and Cows game with your friend. You write down a secret number and ask your friend to guess what the number is. When your friend makes a guess, you provide a hint with the following info: The number of 'bulls', which are digits in the guess that are in the correct position. The number of 'cows', which are digits in the guess that are in your secret number but are located in the wrong position. Specifically, the non-bull digits in the guess that could be rearranged such that they become bulls. Given the secret number secret and your friend's guess guess, return the hint for your friend's guess. The hint should be formatted as 'xAyB', where x is the number of bulls and y is the number of cows.",
             "constraints": "1 <= secret.length, guess.length <= 1000\nsecret.length == guess.length\nsecret and guess consist of digits only.",
             "testcase": [
                 {
-                    "input": "secret = '1807', guess = '7810'",
+                    "input": "'1807','7810'",
                     "output": "1A3B",
                     "explanation": "Bulls are connected with a '|' and cows are underlined:\n'1807'\n  |\n'7810'"
                 },
                 {
-                    "input": "secret = '1123', guess = '0111'",
+                    "input": "'1123','0111'",
                     "output": "1A1B",
                     "explanation": "Bulls are connected with a '|' and cows are underlined:\n'1123'        '1123'\n  |      or     |\n'0111'        '0111'\nNote that only one of the two unmatched 1s is counted as a cow since the non-bull digits can only be rearranged to allow one 1 to be a bull."
                 },
                 {
-                    "input": "secret = '1234', guess = '5678'",
+                    "input": "'1234','5678'",
                     "output": "0A0B"
                 },
                 {
-                    "input": "secret = '1234', guess = '4321'",
+                    "input": "'1234','4321'",
                     "output": "0A4B"
                 },
                 {
-                    "input": "secret = '1111', guess = '1111'",
+                    "input": "'1111','1111'",
                     "output": "4A0B"
                 },
                 {
-                    "input": "secret = '1234', guess = '1234'",
+                    "input": "'1234','1234'",
                     "output": "4A0B"
                 },
                 {
-                    "input": "secret = '1234', guess = '4324'",
+                    "input": "'1234','4324'",
                     "output": "2A2B"
                 },
                 {
-                    "input": "secret = '1234', guess = '3412'",
+                    "input": "'1234','3412'",
                     "output": "2A2B"
                 },
                 {
-                    "input": "secret = '0000', guess = '0001'",
+                    "input": "'0000','0001'",
                     "output": "3A0B"
                 },
                 {
-                    "input": "secret = '9876', guess = '6789'",
+                    "input": "'9876','6789'",
                     "output": "0A4B"
                 },
                 {
-                    "input": "secret = '1234', guess = '5678'",
+                    "input": "'1234','5678'",
                     "output": "0A0B"
                 },
                 {
-                    "input": "secret = '4321', guess = '1234'",
+                    "input": "'4321','1234'",
                     "output": "0A4B"
                 },
                 {
-                    "input": "secret = '5678', guess = '8765'",
+                    "input": "'5678','8765'",
                     "output": "0A4B"
                 },
                 {
-                    "input": "secret = '1111', guess = '0000'",
+                    "input": "'1111','0000'",
                     "output": "0A0B"
                 },
                 {
-                    "input": "secret = '1234', guess = '4321'",
+                    "input": "'1234','4321'",
                     "output": "0A4B"
                 },
                 {
-                    "input": "secret = '1234', guess = '3412'",
+                    "input": "'1234','3412'",
                     "output": "2A2B"
                 },
                 {
-                    "input": "secret = '0000', guess = '1111'",
+                    "input": "'0000','1111'",
                     "output": "0A0B"
                 },
                 {
-                    "input": "secret = '5678', guess = '5678'",
+                    "input": "'5678','5678'",
                     "output": "4A0B"
                 },
                 {
-                    "input": "secret = '1234', guess = '3412'",
+                    "input": "'1234','3412'",
                     "output": "2A2B"
                 },
                 {
-                    "input": "secret = '1122', guess = '2211'",
+                    "input": "'1122','2211'",
                     "output": "0A4B"
                 },
                 {
-                    "input": "secret = '1234', guess = '1234'",
+                    "input": "'1234','1234'",
                     "output": "4A0B"
                 },
                 {
-                    "input": "secret = '1234', guess = '4321'",
+                    "input": "'1234','4321'",
                     "output": "0A4B"
                 },
                 {
-                    "input": "secret = '0000', guess = '1111'",
+                    "input": "'0000','1111'",
                     "output": "0A0B"
                 },
                 {
-                    "input": "secret = '1234', guess = '1234'",
+                    "input": "'1234','1234'",
                     "output": "4A0B"
                 },
                 {
-                    "input": "secret = '0000', guess = '0001'",
+                    "input": "'0000','0001'",
                     "output": "3A0B"
                 },
                 {
-                    "input": "secret = '5678', guess = '8765'",
+                    "input": "'5678','8765'",
                     "output": "0A4B"
                 },
                 {
-                    "input": "secret = '1234', guess = '3412'",
+                    "input": "'1234','3412'",
                     "output": "2A2B"
                 },
                 {
-                    "input": "secret = '4321', guess = '1234'",
+                    "input": "'4321','1234'",
                     "output": "0A4B"
                 },
                 {
-                    "input": "secret = '1111', guess = '1110'",
+                    "input": "'1111','1110'",
                     "output": "3A0B"
                 },
                 {
-                    "input": "secret = '1234', guess = '5678'",
+                    "input": "'1234','5678'",
                     "output": "0A0B"
                 },
                 {
-                    "input": "secret = '1234', guess = '3412'",
+                    "input": "'1234','3412'",
                     "output": "2A2B"
                 },
                 {
-                    "input": "secret = '0000', guess = '1111'",
+                    "input": "'0000','1111'",
                     "output": "0A0B"
                 },
                 {
-                    "input": "secret = '5678', guess = '8765'",
+                    "input": "'5678','8765'",
                     "output": "0A4B"
                 },
                 {
-                    "input": "secret = '1234', guess = '1234'",
+                    "input": "'1234','1234'",
                     "output": "4A0B"
                 },
                 {
-                    "input": "secret = '1122', guess = '2211'",
+                    "input": "'1122','2211'",
                     "output": "0A4B"
                 },
                 {
-                    "input": "secret = '1111', guess = '0000'",
+                    "input": "'1111','0000'",
                     "output": "0A0B"
                 },
                 {
-                    "input": "secret = '5678', guess = '5678'",
+                    "input": "'5678','5678'",
                     "output": "4A0B"
                 },
                 {
-                    "input": "secret = '1234', guess = '3412'",
+                    "input": "'1234','3412'",
                     "output": "2A2B"
                 },
                 {
-                    "input": "secret = '1122', guess = '2211'",
+                    "input": "'1122','2211'",
                     "output": "0A4B"
                 }
             ]
         },
         {
+            "id": "8",
             "name" : "Valid Sudoko",
             "problem_statement": "Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules: Each row must contain the digits 1-9 without repetition. Each column must contain the digits 1-9 without repetition. Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without repetition. Note: A Sudoku board (partially filled) could be valid but is not necessarily solvable. Only the filled cells need to be validated according to the mentioned rules.",
             "constraints": "board.length == 9\nboard[i].length == 9\nboard[i][j] is a digit 1-9 or '.'.",
             "testcase": [
                 {
-                    "input": "board = [['5','3','.','.','7','.','.','.','.'], ['6','.','.','1','9','5','.','.','.'], ['.','9','8','.','.','.','.','6','.'], ['8','.','.','.','6','.','.','.','3'], ['4','.','.','8','.','3','.','.','1'], ['7','.','.','.','2','.','.','.','6'], ['.','6','.','.','.','.','2','8','.'], ['.','.','.','4','1','9','.','.','5'], ['.','.','.','.','8','.','.','7','9']]",
+                    "input": "'5','3','.','.','7','.','.','.','.','6','.','.','1','9','5','.','.','.','.','9','8','.','.','.','.','6','.','8','.','.','.','6','.','.','.','3','4','.','.','8','.','3','.','.','1','7','.','.','.','2','.','.','.','6','.','6','.','.','.','.','2','8','.','.','.','.','4','1','9','.','.','5','.','.','.','.','8','.','.','7','9'",
                     "output": "true"
                 },
                 {
-                    "input": "board = [['8','3','.','.','7','.','.','.','.'], ['6','.','.','1','9','5','.','.','.'], ['.','9','8','.','.','.','.','6','.'], ['8','.','.','.','6','.','.','.','3'], ['4','.','.','8','.','3','.','.','1'], ['7','.','.','.','2','.','.','.','6'], ['.','6','.','.','.','.','2','8','.'], ['.','.','.','4','1','9','.','.','5'], ['.','.','.','.','8','.','.','7','9']]",
+                    "input": "'8','3','.','.','7','.','.','.','.','6','.','.','1','9','5','.','.','.','.','9','8','.','.','.','.','6','.','8','.','.','.','6','.','.','.','3','4','.','.','8','.','3','.','.','1','7','.','.','.','2','.','.','.','6','.','6','.','.','.','.','2','8','.','.','.','.','4','1','9','.','.','5','.','.','.','.','8','.','.','7','9'",
                     "output": "false",
                     "explanation": "Same as Example 1, except with the 5 in the top left corner being modified to 8. Since there are two 8's in the top left 3x3 sub-box, it is invalid."
                 },
                 {
-                    "input": "board = [['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.']]",
+                    "input": "'.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.'",
                     "output": "true"
                 },
                 {
-                    "input": "board = [['5','3','.','.','7','.','.','.','.'], ['6','.','.','1','9','5','.','.','.'], ['.','9','8','.','.','.','.','6','.'], ['8','.','.','.','6','.','.','.','3'], ['4','.','.','8','.','3','.','.','1'], ['7','.','.','.','2','.','.','.','6'], ['.','6','.','.','.','.','2','8','.'], ['.','.','.','4','1','9','.','.','5'], ['.','.','.','.','.','.','.','.','.']]",
+                    "input": "'5','3','.','.','7','.','.','.','.','6','.','.','1','9','5','.','.','.','.','9','8','.','.','.','.','6','.','8','.','.','.','6','.','.','.','3','4','.','.','8','.','3','.','.','1','7','.','.','.','2','.','.','.','6','.','6','.','.','.','.','2','8','.','.','.','.','4','1','9','.','.','5','.','.','.','.','.','.','.','.','.'",
                     "output": "true"
                 },
                 {
-                    "input": "board = [['5','3','.','.','7','.','.','.','.'], ['6','.','.','1','9','5','.','.','.'], ['.','9','8','.','.','.','.','6','.'], ['8','.','.','.','6','.','.','.','3'], ['4','.','.','8','.','3','.','.','1'], ['7','.','.','.','2','.','.','.','6'], ['.','6','.','.','.','.','2','8','.'], ['.','.','.','4','1','9','.','.','5'], ['.','.','.','.','.','.','.','.','1']]",
+                    "input": "'5','3','.','.','7','.','.','.','.','6','.','.','1','9','5','.','.','.','.','9','8','.','.','.','.','6','.','8','.','.','.','6','.','.','.','3','4','.','.','8','.','3','.','.','1','7','.','.','.','2','.','.','.','6','.','6','.','.','.','.','2','8','.','.','.','.','4','1','9','.','.','5','.','.','.','.','.','.','.','.','1'",
                     "output": "false"
                 },
                 {
-                    "input": "board = [['5','5','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.']]",
+                    "input": "'5','5','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.'",
                     "output": "false"
                 },
                 {
-                    "input": "board = [['1','2','3','4','5','6','7','8','9'], ['4','5','6','7','8','9','1','2','3'], ['7','8','9','1','2','3','4','5','6'], ['2','3','4','5','6','7','8','9','1'], ['5','6','7','8','9','1','2','3','4'], ['8','9','1','2','3','4','5','6','7'], ['3','4','5','6','7','8','9','1','2'], ['6','7','8','9','1','2','3','4','5'], ['9','1','2','3','4','5','6','7','8']]",
+                    "input": "'1','2','3','4','5','6','7','8','9','4','5','6','7','8','9','1','2','3','7','8','9','1','2','3','4','5','6','2','3','4','5','6','7','8','9','1','5','6','7','8','9','1','2','3','4','8','9','1','2','3','4','5','6','7','3','4','5','6','7','8','9','1','2','6','7','8','9','1','2','3','4','5','9','1','2','3','4','5','6','7','8'",
                     "output": "true"
                 },
                 {
-                    "input": "board = [['1','1','1','1','1','1','1','1','1'], ['2','2','2','2','2','2','2','2','2'], ['3','3','3','3','3','3','3','3','3'], ['4','4','4','4','4','4','4','4','4'], ['5','5','5','5','5','5','5','5','5'], ['6','6','6','6','6','6','6','6','6'], ['7','7','7','7','7','7','7','7','7'], ['8','8','8','8','8','8','8','8','8'], ['9','9','9','9','9','9','9','9','9']]",
+                    "input": "'1','1','1','1','1','1','1','1','1','2','2','2','2','2','2','2','2','2','3','3','3','3','3','3','3','3','3','4','4','4','4','4','4','4','4','4','5','5','5','5','5','5','5','5','5','6','6','6','6','6','6','6','6','6','7','7','7','7','7','7','7','7','7','8','8','8','8','8','8','8','8','8','9','9','9','9','9','9','9','9','9'",
                     "output": "false"
                 },
                 {
-                    "input": "board = [['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.'], ['.','.','.','.','.','.','.','.','.']]",
+                    "input": "'.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.'",
                     "output": "true"
                 }
             ]
         },
         {
+            "id": "9",
             "name" : "Matrix Block Sum",
             "problem_statement": "Given a m x n matrix mat and an integer k, return a matrix answer where each answer[i][j] is the sum of all elements mat[r][c] for: i - k <= r <= i + k, j - k <= c <= j + k, and (r, c) is a valid position in the matrix.",
             "constraints": "m == mat.length\nn == mat[i].length\n1 <= m, n, k <= 100\n1 <= mat[i][j] <= 100",
             "testcase": [
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9]], k = 1",
-                    "output": "[[12,21,16],[27,45,33],[24,39,28]]"
+                    "input": "1,2,3,4,5,6,7,8,9,1",
+                    "output": "12,21,16,27,45,33,24,39,28"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9]], k = 2",
-                    "output": "[[45,45,45],[45,45,45],[45,45,45]]"
+                    "input": "1,2,3,4,5,6,7,8,9,2",
+                    "output": "45,45,45,45,45,45,45,45,45"
                 },
                 {
-                    "input": "[[1]], k = 0",
-                    "output": "[[1]]"
+                    "input": "1,0",
+                    "output": "1"
                 },
                 {
-                    "input": "[[1,2],[3,4]], k = 1",
-                    "output": "[[10,11],[11,10]]"
+                    "input": "1,2,3,4,1",
+                    "output": "10,11,11,10"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9]], k = 0",
-                    "output": "[[1,2,3],[4,5,6],[7,8,9]]"
+                    "input": "1,2,3,4,5,6,7,8,9,0",
+                    "output": "1,2,3,4,5,6,7,8,9"
                 },
                 {
-                    "input": "[[2,3,4],[5,6,7],[8,9,10]], k = 2",
-                    "output": "[[39,39,39],[39,39,39],[39,39,39]]"
+                    "input": "2,3,4,5,6,7,8,9,10,2",
+                    "output": "39,39,39,39,39,39,39,39,39"
                 },
                 {
-                    "input": "[[1,1],[1,1]], k = 1",
-                    "output": "[[4,4],[4,4]]"
+                    "input": "1,1,1,1,1",
+                    "output": "4,4,4,4"
                 },
                 {
-                    "input": "[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]], k = 2",
-                    "output": "[[39,43,47,41],[61,68,75,65],[91,101,111,95],[105,116,127,104]]"
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,2",
+                    "output": "39,43,47,41,61,68,75,65,91,101,111,95,105,116,127,104"
                 },
                 {
-                    "input": "[[5]], k = 0",
-                    "output": "[[5]]"
+                    "input": "5,0",
+                    "output": "5"
                 },
                 {
-                    "input": "[[2,3,4],[5,6,7],[8,9,10]], k = 1",
-                    "output": "[[16,19,16],[21,27,21],[19,23,19]]"
+                    "input": "2,3,4,5,6,7,8,9,10,1",
+                    "output": "16,19,16,21,27,21,19,23,19"
                 }
             ]
         },
         {
+            "id": "10",
             "name" : "Diagonal Traverse",
             "problem_statement": "Given an m x n matrix mat, return an array of all the elements of the array in a diagonal order.",
             "constraints": "m == mat.length\nn == mat[i].length\n1 <= m, n <= 10^4\n1 <= m * n <= 10^4\n-10^5 <= mat[i][j] <= 10^5",
             "testcase": [
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9]]",
+                    "input": "1,2,3,4,5,6,7,8,9",
                     "output": "[1,2,4,7,5,3,6,8,9]"
                 },
                 {
-                    "input": "[[1,2],[3,4]]",
+                    "input": "1,2,3,4",
                     "output": "[1,2,3,4]"
                 },
                 {
-                    "input": "[[1]]",
+                    "input": "1",
                     "output": "[1]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6]]",
+                    "input": "1,2,3,4,5,6",
                     "output": "[1,2,3,5,4,6]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6]]",
+                    "input": "1,2,3,4,5,6",
                     "output": "[1,2,4,3,5,6]"
                 },
                 {
-                    "input": "[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
                     "output": "[1,2,5,9,6,3,7,10,13,11,8,12,14,15,16]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,4,7,5,3,6,8,10,9,11,12]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6],[7,8],[9,10]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "[1,2,3,5,4,6,7,9,8,10]"
                 },
                 {
-                    "input": "[[1,2,3,4,5],[6,7,8,9,10]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "[1,2,6,7,3,8,4,9,5,10]"
                 },
                 {
-                    "input": "[[1,2,3,4],[5,6,7,8],[9,10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,5,9,6,3,7,10,11,8,12]"
                 },
                 {
-                    "input": "[[1],[2],[3],[4],[5]]",
+                    "input": "1,2,3,4,5",
                     "output": "[1,2,3,4,5]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,4,7,5,3,6,10,8,9,11,12]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6]]",
+                    "input": "1,2,3,4,5,6",
                     "output": "[1,2,4,3,5,6]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,4,7,5,3,6,10,8,9,11,12]"
                 },
                 {
-                    "input": "[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16],[17,18,19,20]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                     "output": "[1,2,5,9,13,6,4,7,10,14,15,11,8,12,16,17,18,19,20]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6],[7,8]]",
+                    "input": "1,2,3,4,5,6,7,8",
                     "output": "[1,2,3,5,7,4,6,8]"
                 },
                 {
-                    "input": "[[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                     "output": "[1,2,6,11,7,3,8,16,12,9,13,17,20,18,19,14,15,10]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,4,7,5,3,6,10,8,9,11,12]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9]]",
+                    "input": "1,2,3,4,5,6,7,8,9",
                     "output": "[1,2,4,7,5,3,6,8,9]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6],[7,8],[9,10]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "[1,2,3,5,7,4,6,8,9,10]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6]]",
+                    "input": "1,2,3,4,5,6",
                     "output": "[1,2,3,5,4,6]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,4,7,5,3,6,10,8,9,11,12]"
                 },
                 {
-                    "input": "[[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                     "output": "[1,2,6,11,16,7,4,8,12,17,13,9,14,18,15,10,19,20]"
                 },
                 {
-                    "input": "[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16],[17,18,19,20]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                     "output": "[1,2,5,9,13,17,6,4,7,10,14,18,8,11,15,19,12,16,20]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6]]",
+                    "input": "1,2,3,4,5,6",
                     "output": "[1,2,4,5,3,6]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6],[7,8],[9,10]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "[1,2,3,5,7,4,6,8,9,10]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12],[13,14,15]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15",
                     "output": "[1,2,4,7,10,13,5,8,11,14,9,12,15]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9]]",
+                    "input": "1,2,3,4,5,6,7,8,9",
                     "output": "[1,2,4,7,5,3,6,8,9]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,4,7,5,3,6,10,8,9,11,12]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6]]",
+                    "input": "1,2,3,4,5,6",
                     "output": "[1,2,3,5,4,6]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9]]",
+                    "input": "1,2,3,4,5,6,7,8,9",
                     "output": "[1,2,4,7,5,3,6,8,9]"
                 },
                 {
-                    "input": "[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
                     "output": "[1,2,5,9,13,6,4,7,10,14,11,8,12,15,16]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6],[7,8],[9,10]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "[1,2,3,5,7,4,6,8,9,10]"
                 },
                 {
-                    "input": "[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16],[17,18,19,20]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                     "output": "[1,2,5,9,13,17,6,4,7,10,14,18,8,11,15,19,12,16,20]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,4,7,5,3,6,10,8,9,11,12]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9]]",
+                    "input": "1,2,3,4,5,6,7,8,9",
                     "output": "[1,2,4,7,5,3,6,8,9]"
                 },
                 {
-                    "input": "[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
                     "output": "[1,2,5,9,13,6,4,7,10,14,11,8,12,15,16]"
                 },
                 {
-                    "input": "[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
                     "output": "[1,2,5,9,13,6,4,7,10,14,11,8,12,15,16]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,4,7,5,3,6,10,8,9,11,12]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6],[7,8],[9,10]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "[1,2,3,5,7,4,6,8,9,10]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9]]",
+                    "input": "1,2,3,4,5,6,7,8,9",
                     "output": "[1,2,4,7,5,3,6,8,9]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6],[7,8],[9,10]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "[1,2,3,5,7,4,6,8,9,10]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,4,7,5,3,6,10,8,9,11,12]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,4,7,5,3,6,10,8,9,11,12]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,4,7,5,3,6,10,8,9,11,12]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,4,7,5,3,6,10,8,9,11,12]"
                 }
             ]
         },
         {
+            "id": "11",
             "name" : "Spiral Matrix",
             "problem_statement": "Given an m x n matrix, return all elements of the matrix in spiral order.",
             "constraints": "m == matrix.length\nn == matrix[i].length\n1 <= m, n <= 10\n-100 <= matrix[i][j] <= 100",
             "testcase": [
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9]]",
+                    "input": "1,2,3,4,5,6,7,8,9",
                     "output": "[1,2,3,6,9,8,7,4,5]"
                 },
                 {
-                    "input": "[[1,2,3,4],[5,6,7,8],[9,10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,3,4,8,12,11,10,9,5,6,7]"
                 },
                 {
-                    "input": "[[1]]",
+                    "input": "1",
                     "output": "[1]"
                 },
                 {
-                    "input": "[[1,2],[3,4]]",
+                    "input": "1,2,3,4",
                     "output": "[1,2,4,3]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,3,6,12,11,10,7,4,5,8,9]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6]]",
+                    "input": "1,2,3,4,5,6",
                     "output": "[1,2,3,6,5,4]"
                 },
                 {
-                    "input": "[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
                     "output": "[1,2,3,4,8,12,16,15,14,13,9,5,6,7,10,11]"
                 },
                 {
-                    "input": "[[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                     "output": "[1,2,3,4,5,10,15,20,19,18,17,16,11,6,7,8,9,14,13,12]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9]]",
+                    "input": "1,2,3,4,5,6,7,8,9",
                     "output": "[1,2,3,6,9,8,7,4,5]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,3,6,12,11,10,7,4,5,8,9]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6],[7,8],[9,10]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "[1,2,4,6,8,10,9,7,5,3]"
                 },
                 {
-                    "input": "[[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15",
                     "output": "[1,2,3,4,5,10,15,14,13,12,11,6,7,8,9]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,3,6,12,11,10,7,4,5,8,9]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6],[7,8],[9,10]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "[1,2,4,6,8,10,9,7,5,3]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,3,6,12,11,10,7,4,5,8,9]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6],[7,8],[9,10]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "[1,2,4,6,8,10,9,7,5,3]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9]]",
+                    "input": "1,2,3,4,5,6,7,8,9",
                     "output": "[1,2,3,6,9,8,7,4,5]"
                 },
                 {
-                    "input": "[[1,2],[3,4]]",
+                    "input": "1,2,3,4",
                     "output": "[1,2,4,3]"
                 },
                 {
-                    "input": "[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
                     "output": "[1,2,3,4,8,12,16,15,14,13,9,5,6,7,10,11]"
                 },
                 {
-                    "input": "[[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                     "output": "[1,2,3,4,5,10,15,20,19,18,17,16,11,6,7,8,9,14,13,12]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9]]",
+                    "input": "1,2,3,4,5,6,7,8,9",
                     "output": "[1,2,3,6,9,8,7,4,5]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6],[7,8],[9,10]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "[1,2,4,6,8,10,9,7,5,3]"
                 },
                 {
-                    "input": "[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
                     "output": "[1,2,3,4,8,12,16,15,14,13,9,5,6,7,10,11]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,3,6,12,11,10,7,4,5,8,9]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9]]",
+                    "input": "1,2,3,4,5,6,7,8,9",
                     "output": "[1,2,4,7,5,3,6,8,9]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,3,6,12,11,10,7,4,5,8,9]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9]]",
+                    "input": "1,2,3,4,5,6,7,8,9",
                     "output": "[1,2,4,7,5,3,6,8,9]"
                 },
                 {
-                    "input": "[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
                     "output": "[1,2,3,4,8,12,16,15,14,13,9,5,6,7,10,11]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,3,6,12,11,10,7,4,5,8,9]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6],[7,8],[9,10]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "[1,2,4,6,8,10,9,7,5,3]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9]]",
+                    "input": "1,2,3,4,5,6,7,8,9",
                     "output": "[1,2,4,7,5,3,6,8,9]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6],[7,8],[9,10]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "[1,2,3,5,7,4,6,8,9,10]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,3,6,12,11,10,7,4,5,8,9]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6],[7,8],[9,10]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "[1,2,4,6,8,10,9,7,5,3]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,3,6,12,11,10,7,4,5,8,9]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6],[7,8],[9,10]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "[1,2,3,5,7,4,6,8,9,10]"
                 },
                 {
-                    "input": "[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
                     "output": "[1,2,3,4,8,12,16,15,14,13,9,5,6,7,10,11]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9]]",
+                    "input": "1,2,3,4,5,6,7,8,9",
                     "output": "[1,2,4,7,5,3,6,8,9]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,3,6,12,11,10,7,4,5,8,9]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6],[7,8],[9,10]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "[1,2,4,6,8,10,9,7,5,3]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,3,6,12,11,10,7,4,5,8,9]"
                 },
                 {
-                    "input": "[[1,2],[3,4],[5,6],[7,8],[9,10]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "[1,2,3,5,7,4,6,8,9,10]"
                 },
                 {
-                    "input": "[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "[1,2,3,6,12,11,10,7,4,5,8,9]"
                 }
             ]
         },
         {
+            "id": "12",
             "name" : "Contains Duplicate",
             "problem_statement": "Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.",
             "constraints": "1 <= nums.length <= 10^5\n-10^9 <= nums[i] <= 10^9",
             "testcases": [
                 {
-                    "input": "nums = [1,2,3,1]",
+                    "input": "1,2,3,1",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [1,2,3,4]",
+                    "input": "1,2,3,4",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [1,1,1,3,3,4,3,2,4,2]",
+                    "input": "1,1,1,3,3,4,3,2,4,2",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [5,6,7,8,9,10,11,12]",
+                    "input": "5,6,7,8,9,10,11,12",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [5,5,6,6]",
+                    "input": "5,5,6,6",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [100,200,300,400,500,600,700,800,900,1000]",
+                    "input": "100,200,300,400,500,600,700,800,900,1000",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [1,2,2,3,4,5,6]",
+                    "input": "1,2,2,3,4,5,6",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [2,4,6,8,10,12,14]",
+                    "input": "2,4,6,8,10,12,14",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [7,8,9,10,11,12,12]",
+                    "input": "7,8,9,10,11,12,12",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,6,7,8,9,10]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [10,20,30,40,50,60,70,80,90,100,100]",
+                    "input": "10,20,30,40,50,60,70,80,90,100,100",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,6,7,8,9]",
+                    "input": "1,2,3,4,5,6,7,8,9",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [1,1,2,2,3,3]",
+                    "input": "1,1,2,2,3,3",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [2,4,6,8,10,12,14,14]",
+                    "input": "2,4,6,8,10,12,14,14",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [1,1,1,1,1,1,1,1,1,1]",
+                    "input": "1,1,1,1,1,1,1,1,1,1",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [99,98,97,96,95,94,93,92,91,90]",
+                    "input": "99,98,97,96,95,94,93,92,91,90",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,6,6]",
+                    "input": "1,2,3,4,5,6,6",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,6,7,8,8]",
+                    "input": "1,2,3,4,5,6,7,8,8",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [10,20,30,40,50,60,70,80,90,100]",
+                    "input": "10,20,30,40,50,60,70,80,90,100",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [100,200,300,400,500,600,700,800,900,1000,500]",
+                    "input": "100,200,300,400,500,600,700,800,900,1000,500",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [5,10,15,20,25,30,35,40,45,50]",
+                    "input": "5,10,15,20,25,30,35,40,45,50",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [5,10,15,20,25,30,35,40,45,50,50]",
+                    "input": "5,10,15,20,25,30,35,40,45,50,50",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,5]",
+                    "input": "1,2,3,4,5,5",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [2,3,4,5,6,7,8,9,10]",
+                    "input": "2,3,4,5,6,7,8,9,10",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [2,2,3,4,5]",
+                    "input": "2,2,3,4,5",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,6,7,8,9,10,11,12]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,5,6,7]",
+                    "input": "1,2,3,4,5,5,6,7",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [2,4,6,8,10,12,14,16,18]",
+                    "input": "2,4,6,8,10,12,14,16,18",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [2,4,6,8,10,12,14,16,16]",
+                    "input": "2,4,6,8,10,12,14,16,16",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [1000,2000,3000,4000,5000,6000,7000,8000,9000]",
+                    "input": "1000,2000,3000,4000,5000,6000,7000,8000,9000",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [1000,2000,3000,4000,5000,6000,7000,8000,9000,5000]",
+                    "input": "1000,2000,3000,4000,5000,6000,7000,8000,9000,5000",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [1,1,2,3,4,5]",
+                    "input": "1,1,2,3,4,5",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,6,7,8,9]",
+                    "input": "1,2,3,4,5,6,7,8,9",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [1,1,1,2,2,3,3,4]",
+                    "input": "1,1,1,2,2,3,3,4",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [5,5,6,7,8]",
+                    "input": "5,5,6,7,8",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,6,7,8,9,10]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,6,7,8,9,9]",
+                    "input": "1,2,3,4,5,6,7,8,9,9",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,6,7,8,9,10]",
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,6,7,8,9,10,10]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,10",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [10,20,30,40,50,60,70,80,90]",
+                    "input": "10,20,30,40,50,60,70,80,90",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [10,20,30,40,50,60,70,80,90,30]",
+                    "input": "10,20,30,40,50,60,70,80,90,30",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,6,7,8,9,10,10]",
+                    "input": "1,2,3,4,5,6,7,8,9,10,10",
                     "output": "true"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,6,7,8,9]",
+                    "input": "1,2,3,4,5,6,7,8,9",
                     "output": "false"
                 },
                 {
-                    "input": "nums = [1,2,3,4,5,6,7,8,9,9,9]",
+                    "input": "1,2,3,4,5,6,7,8,9,9,9",
                     "output": "true"
                 }
             ]
         },
         {
-            "name" : "Finding Pairs with a certain Sum ",
-            "problem_statement": "You are given two integer arrays nums1 and nums2. Implement a data structure that supports queries of two types: Add a positive integer to an element of a given index in the array nums2, and Count the number of pairs (i, j) such that nums1[i] + nums2[j] equals a given value.",
-            "constraints": "1 <= nums1.length <= 1000\n1 <= nums2.length <= 10^5\n1 <= nums1[i] <= 10^9\n1 <= nums2[i] <= 10^5\n0 <= index < nums2.length\n1 <= val <= 10^5\n1 <= tot <= 10^9\nAt most 1000 calls are made to add and count each.",
-            "testcases": [
-                {
-                    "input": ["FindSumPairs", "count", "add", "count"],
-                    "parameters": [[[1, 2], [3, 4]], [5], [0, 2], [6]],
-                    "output": [null, 1, null, 0]
-                },
-                {
-                    "input": ["FindSumPairs", "add", "count", "add", "count"],
-                    "parameters": [[[1, 1, 2], [1, 2, 3]], [1, 1], [4], [1, 2], [5]],
-                    "output": [null, null, 2, null, 1]
-                },
-                {
-                    "input": ["FindSumPairs", "count", "add", "count"],
-                    "parameters": [[[5, 5, 5], [1, 2, 3]], [6], [2, 3], [8]],
-                    "output": [0, null, 0]
-                },
-                {
-                    "input": ["FindSumPairs", "count", "add", "count"],
-                    "parameters": [[[1, 2, 3], [4, 5, 6]], [7], [2, 1], [8]],
-                    "output": [3, null, 1]
-                },
-                {
-                    "input": ["FindSumPairs", "count", "add", "count"],
-                    "parameters": [[[2, 3, 4], [1, 1, 1]], [4], [1, 1], [5]],
-                    "output": [3, null, 1]
-                },
-                {
-                    "input": ["FindSumPairs", "add", "count", "add", "count", "add", "count"],
-                    "parameters": [[[1, 2, 3], [4, 5, 6]], [3, 1], [9], [2, 2], [10], [1, 1], [9]],
-                    "output": [2, null, 1, null, 3]
-                },
-                {
-                    "input": ["FindSumPairs", "count", "add", "count", "add", "count"],
-                    "parameters": [[[1, 2], [3, 4]], [6], [0, 2], [7], [1, 1], [8]],
-                    "output": [1, null, 1, null]
-                },
-                {
-                    "input": ["FindSumPairs", "add", "count", "add", "count"],
-                    "parameters": [[[1, 2, 3], [1, 2, 3]], [0, 1], [3], [2, 2], [5]],
-                    "output": [3, null, 2]
-                },
-                {
-                    "input": ["FindSumPairs", "add", "add", "count"],
-                    "parameters": [[[2, 2], [1, 1]], [1, 1], [1, 1], [4]],
-                    "output": [null, null, 2]
-                },
-                {
-                    "input": ["FindSumPairs", "count", "add", "count"],
-                    "parameters": [[[1, 2, 3], [1, 2, 3]], [5], [0, 1], [7]],
-                    "output": [0, null, 0]
-                },
-                {
-                    "input": ["FindSumPairs", "count", "add", "count", "add", "count"],
-                    "parameters": [[[4, 4, 4], [1, 2, 3]], [6], [1, 2], [7], [2, 3], [8]],
-                    "output": [0, null, 0, null, 1]
-                },
-                {
-                    "input": ["FindSumPairs", "add", "add", "count"],
-                    "parameters": [[[1, 2, 3], [4, 5, 6]], [1, 2], [2, 1], [8]],
-                    "output": [null, null, 2]
-                },
-                {
-                    "input": ["FindSumPairs", "count", "add", "count"],
-                    "parameters": [[[3, 3, 3], [1, 1, 1]], [4], [1, 1], [5]],
-                    "output": [3, null, 3]
-                },
-                {
-                    "input": ["FindSumPairs", "add", "add", "count"],
-                    "parameters": [[[2, 3], [1, 2]], [0, 1], [1, 1], [4]],
-                    "output": [null, null, 1]
-                },
-                {
-                    "input": ["FindSumPairs", "count", "add", "count", "add", "count"],
-                    "parameters": [[[1, 1, 1], [2, 2, 2]], [3], [0, 1], [4], [1, 1], [5]],
-                    "output": [3, null, 3, null]
-                },
-                {
-                    "input": ["FindSumPairs", "add", "count", "add", "count"],
-                    "parameters": [[[1, 2], [1, 2]], [1, 2], [4], [0, 1], [5]],
-                    "output": [2, null, 2]
-                },
-                {
-                    "input": ["FindSumPairs", "count", "add", "count", "add", "count"],
-                    "parameters": [[[5, 5, 5], [1, 2, 3]], [8], [2, 1], [9], [1, 2], [10]],
-                    "output": [0, null, 1, null]
-                },
-                {
-                    "input": ["FindSumPairs", "add", "add", "count", "add", "count"],
-                    "parameters": [[[1, 2, 3], [3, 4, 5]], [1, 2], [0, 1], [5], [1, 1], [6]],
-                    "output": [null, null, 2, null, 1]
-                },
-                {
-                    "input": ["FindSumPairs", "count", "add", "count"],
-                    "parameters": [[[4, 5], [6, 7]], [10], [1, 1], [12]],
-                    "output": [1, null, 0]
-                },
-                {
-                    "input": ["FindSumPairs", "count", "add", "count", "add", "count"],
-                    "parameters": [[[1, 1, 1], [2, 2, 2]], [3], [2, 1], [4], [1, 1], [5]],
-                    "output": [3, null, 3, null]
-                },
-                {
-                    "input": ["FindSumPairs", "add", "count", "add", "count"],
-                    "parameters": [[[3, 3], [4, 5]], [1, 2], [8], [0, 1], [9]],
-                    "output": [1, null, 0]
-                },
-                {
-                    "input": ["FindSumPairs", "count", "add", "count"],
-                    "parameters": [[[6, 7], [8, 9]], [10], [1, 1], [12]],
-                    "output": [1, null, 1]
-                },
-                {
-                    "input": ["FindSumPairs", "add", "count", "add", "count"],
-                    "parameters": [[[5, 6, 7], [1, 2, 3]], [1, 1], [7], [2, 2], [8]],
-                    "output": [0, null, 1]
-                },
-                {
-                    "input": ["FindSumPairs", "count", "add", "count", "add", "count"],
-                    "parameters": [[[1, 2, 3], [4, 5, 6]], [7], [1, 1], [8], [2, 2], [9]],
-                    "output": [2, null, 1, null]
-                },
-                {
-                    "input": ["FindSumPairs", "add", "count", "add", "count"],
-                    "parameters": [[[1, 1, 2], [3, 4, 5]], [2, 1], [6], [1, 2], [7]],
-                    "output": [1, null, 2]
-                },
-                {
-                    "input": ["FindSumPairs", "count", "add", "count", "add", "count"],
-                    "parameters": [[[4, 4, 4], [1, 2, 3]], [7], [1, 1], [8], [2, 2], [9]],
-                    "output": [0, null, 1, null]
-                },
-                {
-                    "input": ["FindSumPairs", "add", "add", "count"],
-                    "parameters": [[[1, 2, 3], [3, 4, 5]], [2, 2], [1, 1], [7]],
-                    "output": [null, null, 2]
-                },
-                {
-                    "input": ["FindSumPairs", "count", "add", "count"],
-                    "parameters": [[[1, 1, 1], [2, 2, 2]], [3], [1, 2], [4]],
-                    "output": [3, null, 3]
-                },
-                {
-                    "input": ["FindSumPairs", "count", "add", "count", "add", "count"],
-                    "parameters": [[[1, 2, 3], [3, 4, 5]], [8], [2, 1], [9], [1, 1], [10]],
-                    "output": [1, null, 1, null]
-                },
-                {
-                    "input": ["FindSumPairs", "count", "add", "count"],
-                    "parameters": [[[1, 2, 3], [4, 5, 6]], [10], [0, 2], [11]],
-                    "output": [1, null, 0]
-                }
-            ]
-        },
-        {
+            "id": "13",
             "name" : "Sort Character by Frequency",
             "problem_statement": "Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string. Return the sorted string. If there are multiple answers, return any of them.",
             "constraints": "1 <= s.length <= 5 * 10^5\ns consists of uppercase and lowercase English letters and digits.",
@@ -2006,768 +1699,583 @@
             ]
         },
         {
+            "id": "14",
             "name" :"Non-Overlapping Intervals",
-            "problem_statement": "Given an array of intervals intervals where intervals[i] = [starti, endi], return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.",
+            "problem_statement": "Given an array of intervals intervals where intervals[i] = [starti, endi,return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.",
             "constraints": "1 <= intervals.length <= 10^5\nintervals[i].length == 2\n-5 * 10^4 <= starti < endi <= 5 * 10^4",
             "testcases": [
                 {
-                    "input": [[1,2],[2,3],[3,4],[1,3]],
+                    "input": "1,2,2,3,3,4,1,3",
                     "output": 1
                 },
                 {
-                    "input": [[1,2],[1,2],[1,2]],
+                    "input": "1,2,1,2,1,2",
                     "output": 2
                 },
                 {
-                    "input": [[1,2],[2,3]],
+                    "input": "1,2,2,3",
                     "output": 0
                 },
                 {
-                    "input": [[1,2],[2,3],[3,4],[5,6],[7,8]],
+                    "input": "1,2,2,3,3,4,5,6,7,8",
                     "output": 0
                 },
                 {
-                    "input": [[1,4],[2,3],[3,6]],
+                    "input": "1,4,2,3,3,6",
                     "output": 1
                 },
                 {
-                    "input": [[1,2],[3,4],[5,6],[7,8],[9,10]],
+                    "input": "1,2,3,4,5,6,7,8,9,10",
                     "output": 0
                 },
                 {
-                    "input": [[1,3],[2,4],[5,7],[6,8]],
+                    "input": "1,3,2,4,5,7,6,8",
                     "output": 2
                 },
                 {
-                    "input": [[1,2],[2,3],[4,5],[7,8]],
+                    "input": "1,2,2,3,4,5,7,8",
                     "output": 0
                 },
                 {
-                    "input": [[1,5],[2,6],[3,7],[4,8]],
+                    "input": "1,5,2,6,3,7,4,8",
                     "output": 2
                 },
                 {
-                    "input": [[1,3],[3,5],[6,8],[8,10]],
+                    "input": "1,3,3,5,6,8,8,10",
                     "output": 0
                 },
                 {
-                    "input": [[1,4],[2,5],[3,6],[7,8]],
+                    "input": "1,4,2,5,3,6,7,8",
                     "output": 2
                 },
                 {
-                    "input": [[1,2],[2,3],[3,4],[4,5]],
+                    "input": "1,2,2,3,3,4,4,5",
                     "output": 0
                 },
                 {
-                    "input": [[1,5],[6,10],[2,6],[5,8]],
+                    "input": "1,5,6,10,2,6,5,8",
                     "output": 2
                 },
                 {
-                    "input": [[1,3],[2,4],[3,5],[4,6]],
+                    "input": "1,3,2,4,3,5,4,6",
                     "output": 2
                 },
                 {
-                    "input": [[1,2],[2,3],[3,4],[4,5],[5,6]],
+                    "input": "1,2,2,3,3,4,4,5,5,6",
                     "output": 0
                 },
                 {
-                    "input": [[1,4],[2,5],[3,6],[4,7]],
+                    "input": "1,4,2,5,3,6,4,7",
                     "output": 2
                 },
                 {
-                    "input": [[1,2],[2,3],[3,4],[5,6]],
+                    "input": "1,2,2,3,3,4,5,6",
                     "output": 0
                 },
                 {
-                    "input": [[1,2],[3,4],[5,6],[7,8],[1,5]],
+                    "input": "1,2,3,4,5,6,7,8,1,5",
                     "output": 1
                 },
                 {
-                    "input": [[1,2],[2,3],[3,4],[4,5],[1,4]],
+                    "input": "1,2,2,3,3,4,4,5,1,4",
                     "output": 1
                 },
                 {
-                    "input": [[1,6],[2,5],[3,4],[7,8]],
+                    "input": "1,6,2,5,3,4,7,8",
                     "output": 2
                 },
                 {
-                    "input": [[1,2],[3,4],[5,6],[7,9],[8,10]],
+                    "input": "1,2,3,4,5,6,7,9,8,10",
                     "output": 1
                 },
                 {
-                    "input": [[1,2],[3,5],[4,6],[7,8]],
+                    "input": "1,2,3,5,4,6,7,8",
                     "output": 1
                 },
                 {
-                    "input": [[1,3],[2,4],[5,7],[6,8]],
+                    "input": "1,3,2,4,5,7,6,8",
                     "output": 1
                 },
                 {
-                    "input": [[1,2],[3,4],[2,5],[4,6]],
+                    "input": "1,2,3,4,2,5,4,6",
                     "output": 2
                 },
                 {
-                    "input": [[1,2],[3,4],[5,6],[2,5]],
+                    "input": "1,2,3,4,5,6,2,5",
                     "output": 1
                 },
                 {
-                    "input": [[1,5],[6,10],[2,6],[7,8]],
+                    "input": "1,5,6,10,2,6,7,8",
                     "output": 2
                 },
                 {
-                    "input": [[1,2],[3,4],[5,6],[1,3]],
+                    "input": "1,2,3,4,5,6,1,3",
                     "output": 1
                 },
                 {
-                    "input": [[1,2],[3,5],[6,8],[4,7]],
+                    "input": "1,2,3,5,6,8,4,7",
                     "output": 2
                 },
                 {
-                    "input": [[1,4],[2,5],[3,6],[4,7],[5,8]],
+                    "input": "1,4,2,5,3,6,4,7,5,8",
                     "output": 2
                 },
                 {
-                    "input": [[1,2],[2,3],[4,5],[3,6]],
+                    "input": "1,2,2,3,4,5,3,6",
                     "output": 1
                 },
                 {
-                    "input": [[1,5],[2,6],[4,8],[7,9]],
+                    "input": "1,5,2,6,4,8,7,9",
                     "output": 2
                 },
                 {
-                    "input": [[1,2],[2,4],[3,5],[4,6]],
+                    "input": "1,2,2,4,3,5,4,6",
                     "output": 2
                 },
                 {
-                    "input": [[1,2],[3,4],[5,6],[6,8]],
+                    "input": "1,2,3,4,5,6,6,8",
                     "output": 1
                 },
                 {
-                    "input": [[1,3],[4,6],[7,9],[10,12]],
+                    "input": "1,3,4,6,7,9,10,12",
                     "output": 0
                 },
                 {
-                    "input": [[1,2],[2,5],[4,6],[6,8]],
+                    "input": "1,2,2,5,4,6,6,8",
                     "output": 2
                 },
                 {
-                    "input": [[1,5],[2,6],[3,7],[4,8]],
+                    "input": "1,5,2,6,3,7,4,8",
                     "output": 2
                 },
                 {
-                    "input": [[1,2],[3,5],[4,6],[5,7]],
+                    "input": "1,2,3,5,4,6,5,7",
                     "output": 2
                 },
                 {
-                    "input": [[1,3],[4,5],[6,8],[9,10]],
+                    "input": "1,3,4,5,6,8,9,10",
                     "output": 0
                 },
                 {
-                    "input": [[1,3],[2,4],[3,5],[4,6]],
+                    "input": "1,3,2,4,3,5,4,6",
                     "output": 2
                 },
                 {
-                    "input": [[1,2],[2,4],[4,6],[5,8]],
+                    "input": "1,2,2,4,4,6,5,8",
                     "output": 2
                 },
                 {
-                    "input": [[1,4],[2,5],[3,6],[4,7]],
+                    "input": "1,4,2,5,3,6,4,7",
                     "output": 2
                 },
                 {
-                    "input": [[1,5],[2,6],[4,7],[7,9]],
+                    "input": "1,5,2,6,4,7,7,9",
                     "output": 2
                 },
                 {
-                    "input": [[1,2],[2,3],[4,5],[5,6]],
+                    "input": "1,2,2,3,4,5,5,6",
                     "output": 1
                 },
                 {
-                    "input": [[1,4],[2,5],[3,6],[4,8]],
+                    "input": "1,4,2,5,3,6,4,8",
                     "output": 2
                 },
                 {
-                    "input": [[1,2],[2,4],[4,5],[5,7]],
+                    "input": "1,2,2,4,4,5,5,7",
                     "output": 2
                 },
                 {
-                    "input": [[1,2],[3,4],[4,6],[5,7]],
+                    "input": "1,2,3,4,4,6,5,7",
                     "output": 1
                 },
                 {
-                    "input": [[1,3],[2,4],[4,6],[5,7]],
+                    "input": "1,3,2,4,4,6,5,7",
                     "output": 2
                 },
                 {
-                    "input": [[1,2],[3,5],[4,6],[6,8]],
+                    "input": "1,2,3,5,4,6,6,8",
                     "output": 1
                 }
             ]
         },
         {
+            "id": "15",
             "name" : "Smallest Range",
             "problem_statement": "You are given an integer array nums and an integer k. For each index i where 0 <= i < nums.length, change nums[i] to be either nums[i] + k or nums[i] - k. The score of nums is the difference between the maximum and minimum elements in nums. Return the minimum score of nums after changing the values at each index.",
             "constraints": "1 <= nums.length <= 10^4\n0 <= nums[i] <= 10^4\n0 <= k <= 10^4",
             "testcases": [
                 {
-                    "input": [[1], 0],
+                    "input": "1,0",
                     "output": 0
                 },
                 {
-                    "input": [[0, 10], 2],
+                    "input": "0, 10,2",
                     "output": 6
                 },
                 {
-                    "input": [[1, 3, 6], 3],
+                    "input": "1, 3, 6,3",
                     "output": 3
                 },
                 {
-                    "input": [[1, 5, 9], 4],
+                    "input": "1, 5, 9,4",
                     "output": 8
                 },
                 {
-                    "input": [[1, 5, 10], 2],
+                    "input": "1, 5, 10,2",
                     "output": 8
                 },
                 {
-                    "input": [[3, 8, 12], 5],
+                    "input": "3, 8, 12,5",
                     "output": 7
                 },
                 {
-                    "input": [[4, 7, 11], 3],
+                    "input": "4, 7, 11,3",
                     "output": 7
                 },
                 {
-                    "input": [[2, 6, 8], 4],
+                    "input": "2, 6, 8,4",
                     "output": 6
                 },
                 {
-                    "input": [[10, 15, 20], 5],
+                    "input": "10, 15, 20,5",
                     "output": 10
                 },
                 {
-                    "input": [[1, 1, 1], 10],
+                    "input": "1, 1, 1,10",
                     "output": 0
                 },
                 {
-                    "input": [[5, 15, 25], 10],
+                    "input": "5, 15, 25,10",
                     "output": 20
                 },
                 {
-                    "input": [[7, 9, 15], 3],
+                    "input": "7, 9, 15,3",
                     "output": 8
                 },
                 {
-                    "input": [[3, 8, 15], 6],
+                    "input": "3, 8, 15,6",
                     "output": 9
                 },
                 {
-                    "input": [[1, 7, 11], 4],
+                    "input": "1, 7, 11,4",
                     "output": 10
                 },
                 {
-                    "input": [[2, 4, 6], 2],
+                    "input": "2, 4, 6,2",
                     "output": 6
                 },
                 {
-                    "input": [[10, 12, 15], 1],
+                    "input": "10, 12, 15,1",
                     "output": 5
                 },
                 {
-                    "input": [[4, 9, 14], 5],
+                    "input": "4, 9, 14,5",
                     "output": 10
                 },
                 {
-                    "input": [[6, 8, 10], 2],
+                    "input": "6, 8, 10,2",
                     "output": 6
                 },
                 {
-                    "input": [[2, 5, 8], 3],
+                    "input": "2, 5, 8,3",
                     "output": 6
                 },
                 {
-                    "input": [[3, 7, 12], 4],
+                    "input": "3, 7, 12,4",
                     "output": 8
                 },
                 {
-                    "input": [[5, 10, 15], 5],
+                    "input": "5, 10, 15,5",
                     "output": 10
                 },
                 {
-                    "input": [[8, 12, 16], 2],
+                    "input": "8, 12, 16,2",
                     "output": 8
                 },
                 {
-                    "input": [[3, 5, 8], 3],
+                    "input": "3, 5, 8,3",
                     "output": 6
                 },
                 {
-                    "input": [[1, 3, 6], 5],
+                    "input": "1, 3, 6,5",
                     "output": 10
                 },
                 {
-                    "input": [[7, 10, 14], 3],
+                    "input": "7, 10, 14,3",
                     "output": 9
                 },
                 {
-                    "input": [[2, 4, 8], 3],
+                    "input": "2, 4, 8,3",
                     "output": 7
                 },
                 {
-                    "input": [[6, 12, 18], 6],
+                    "input": "6, 12, 18,6",
                     "output": 12
                 },
                 {
-                    "input": [[4, 8, 12], 2],
+                    "input": "4, 8, 12,2",
                     "output": 8
                 },
                 {
-                    "input": [[5, 7, 10], 4],
+                    "input": "5, 7, 10,4",
                     "output": 8
                 },
                 {
-                    "input": [[10, 20, 30], 5],
+                    "input": "10, 20, 30,5",
                     "output": 20
                 },
                 {
-                    "input": [[1, 6, 11], 5],
+                    "input": "1, 6, 11,5",
                     "output": 10
                 },
                 {
-                    "input": [[7, 9, 15], 2],
+                    "input": "7, 9, 15,2",
                     "output": 8
                 },
                 {
-                    "input": [[3, 6, 9], 3],
+                    "input": "3, 6, 9,3",
                     "output": 6
                 },
                 {
-                    "input": [[5, 10, 15], 4],
+                    "input": "5, 10, 15,4",
                     "output": 8
                 },
                 {
-                    "input": [[2, 4, 6], 1],
+                    "input": "2, 4, 6,1",
                     "output": 4
                 },
                 {
-                    "input": [[1, 5, 9], 3],
+                    "input": "1, 5, 9,3",
                     "output": 8
                 },
                 {
-                    "input": [[6, 9, 15], 3],
+                    "input": "6, 9, 15,3",
                     "output": 9
                 },
                 {
-                    "input": [[4, 8, 12], 3],
+                    "input": "4, 8, 12,3",
                     "output": 8
                 },
                 {
-                    "input": [[10, 14, 18], 2],
+                    "input": "10, 14, 18,2",
                     "output": 8
                 },
                 {
-                    "input": [[5, 10, 20], 7],
+                    "input": "5, 10, 20,7",
                     "output": 18
                 },
                 {
-                    "input": [[1, 3, 7], 2],
+                    "input": "1, 3, 7,2",
                     "output": 6
                 },
                 {
-                    "input": [[3, 6, 10], 4],
+                    "input": "3, 6, 10,4",
                     "output": 8
                 },
                 {
-                    "input": [[2, 5, 8], 3],
+                    "input": "2, 5, 8,3",
                     "output": 7
                 },
                 {
-                    "input": [[8, 12, 16], 4],
+                    "input": "8, 12, 16,4",
                     "output": 8
                 },
                 {
-                    "input": [[7, 9, 11], 2],
+                    "input": "7, 9, 11,2",
                     "output": 6
                 },
                 {
-                    "input": [[1, 4, 7], 3],
+                    "input": "1, 4, 7,3",
                     "output": 6
                 },
                 {
-                    "input": [[5, 8, 12], 3],
+                    "input": "5, 8, 12,3",
                     "output": 7
                 }
             ]
         },
         {
+            "id": "16",
             "name" :"Peak Element",
             "problem_statement": "You are given an integer mountain array arr of length n where the values increase to a peak element and then decrease. Return the index of the peak element. Your task is to solve it in O(log(n)) time complexity.",
             "constraints": "3 <= arr.length <= 10^5\n0 <= arr[i] <= 10^6\narr is guaranteed to be a mountain array.",
             "testcases": [
                 {
-                    "input": [0, 1, 0],
+                    "input": "0, 1, 0",
                     "output": 1,
                     "explanation": "The peak element is 1, which is at index 1."
                 },
                 {
-                    "input": [0, 2, 1, 0],
+                    "input": "0, 2, 1, 0",
                     "output": 1,
                     "explanation": "The peak element is 2, which is at index 1."
                 },
                 {
-                    "input": [0, 10, 5, 2],
+                    "input": "0, 10, 5, 2",
                     "output": 1,
                     "explanation": "The peak element is 10, which is at index 1."
                 },
                 {
-                    "input": [0, 1, 2, 1, 0],
+                    "input": "0, 1, 2, 1, 0",
                     "output": 2,
                     "explanation": "The peak element is 2, which is at index 2."
                 },
                 {
-                    "input": [1, 3, 8, 12, 4, 2],
+                    "input": "1, 3, 8, 12, 4, 2",
                     "output": 3,
                     "explanation": "The peak element is 12, which is at index 3."
                 },
                 {
-                    "input": [1, 2, 3, 4, 5, 4, 3, 2, 1],
+                    "input": "1, 2, 3, 4, 5, 4, 3, 2, 1",
                     "output": 4,
                     "explanation": "The peak element is 5, which is at index 4."
                 },
                 {
-                    "input": [1, 3, 5, 7, 9, 7, 5, 3, 1],
+                    "input": "1, 3, 5, 7, 9, 7, 5, 3, 1",
                     "output": 4,
                     "explanation": "The peak element is 9, which is at index 4."
                 },
                 {
-                    "input": [0, 1, 2, 3, 2, 1, 0],
+                    "input": "0, 1, 2, 3, 2, 1, 0",
                     "output": 3,
                     "explanation": "The peak element is 3, which is at index 3."
                 },
                 {
-                    "input": [0, 2, 4, 8, 4, 2, 0],
+                    "input": "0, 2, 4, 8, 4, 2, 0",
                     "output": 3,
                     "explanation": "The peak element is 8, which is at index 3."
                 },
                 {
-                    "input": [0, 1, 0, 2, 1],
+                    "input": "0, 1, 0, 2, 1",
                     "output": 3,
                     "explanation": "The peak element is 2, which is at index 3."
                 }
             ]
         },
         {
+            "id": "17",
             "name" : "Koko Eat Bananas",
             "problem_statement": "Koko loves to eat bananas. There are n piles of bananas, and the ith pile has piles[i] bananas. The guards have gone and will come back in h hours. Koko can decide her bananas-per-hour eating speed of k. Each hour, she chooses some pile of bananas and eats k bananas from that pile. If the pile has less than k bananas, she eats all of them instead and will not eat any more bananas during this hour. Koko likes to eat slowly but still wants to finish eating all the bananas before the guards return. Return the minimum integer k such that she can eat all the bananas within h hours.",
             "constraints": "1 <= piles.length <= 10^4\npiles.length <= h <= 10^9\n1 <= piles[i] <= 10^9",
             "testcases": [
                 {
-                    "input": {
-                        "piles": [3, 6, 7, 11],
-                        "h": 8
-                    },
+                    "input": "3, 6, 7, 11,8",
                     "output": 4,
                     "explanation": "Koko can finish eating all the bananas in 8 hours with a speed of 4 bananas per hour. Here's the breakdown:\n- 1st hour: She eats 3 bananas from the first pile (3 bananas left).\n- 2nd hour: She eats 4 bananas from the second pile (2 bananas left).\n- 3rd hour: She eats 4 bananas from the second pile (0 bananas left).\n- 4th hour: She eats 4 bananas from the third pile (3 bananas left).\n- 5th hour: She eats 3 bananas from the third pile (0 bananas left).\n- 6th hour: She eats 4 bananas from the fourth pile (7 bananas left).\n- 7th hour: She eats 4 bananas from the fourth pile (3 bananas left).\n- 8th hour: She eats 3 bananas from the fourth pile (0 bananas left)."
                 },
                 {
-                    "input": {
-                        "piles": [30, 11, 23, 4, 20],
-                        "h": 5
-                    },
+                    "input": "30, 11, 23, 4, 20,5",
                     "output": 30,
                     "explanation": "Koko must eat all the bananas in 5 hours. The optimal speed is 30 bananas per hour. Here's the breakdown:\n- 1st hour: She eats all 30 bananas from the first pile (0 bananas left).\n- 2nd hour: She eats all 11 bananas from the second pile (0 bananas left).\n- 3rd hour: She eats all 23 bananas from the third pile (0 bananas left).\n- 4th hour: She eats all 4 bananas from the fourth pile (0 bananas left).\n- 5th hour: She eats all 20 bananas from the fifth pile (0 bananas left).\nAt this speed, Koko can finish all the piles within 5 hours."
                 },
                 {
-                    "input": {
-                        "piles": [30, 11, 23, 4, 20],
-                        "h": 6
-                    },
+                    "input": "30, 11, 23, 4, 20,6",
                     "output": 23,
                     "explanation": "With a speed of 23 bananas per hour, Koko can finish eating all the bananas within 6 hours:\n- 1st hour: She eats all 23 bananas from the third pile (0 bananas left).\n- 2nd hour: She eats 23 bananas from the first pile (7 bananas left).\n- 3rd hour: She eats 7 bananas from the first pile (0 bananas left).\n- 4th hour: She eats all 11 bananas from the second pile (0 bananas left).\n- 5th hour: She eats all 4 bananas from the fourth pile (0 bananas left).\n- 6th hour: She eats all 20 bananas from the fifth pile (0 bananas left).\nThis is the minimum speed required to finish all the piles within 6 hours."
                 },
                 {
-                    "input": {
-                        "piles": [312884470],
-                        "h": 968709470
-                    },
+                    "input":"312884470,968709470",
                     "output": 1
                 },
                 {
-                    "input": {
-                        "piles": [332484035, 524908576, 855865114, 632922376, 222257295, 690155293, 112677673, 679580077, 337406589, 290818316, 877337160, 901728858, 679284947, 688210097, 692137887, 718203285, 629455728, 941802184],
-                        "h": 823855818
-                    },
+                    "input": "332484035, 524908576, 855865114, 632922376, 222257295, 690155293, 112677673, 679580077, 337406589, 290818316, 877337160, 901728858, 679284947, 688210097, 692137887, 718203285, 629455728, 941802184,823855818",
                     "output": 14
                 }
             ]
         },
         {
+            "id": "18",
             "name" : "Minimum Garden Perimeter to collect Enough apples",
             "problem_statement": "In a garden represented as an infinite 2D grid, there is an apple tree planted at every integer coordinate. The apple tree planted at an integer coordinate (i, j) has |i| + |j| apples growing on it. You will buy an axis-aligned square plot of land that is centered at (0, 0). Given an integer neededApples, return the minimum perimeter of a plot such that at least neededApples apples are inside or on the perimeter of that plot. The value of |x| is defined as: x if x >= 0, -x if x < 0.",
             "constraints": "1 <= neededApples <= 10^15",
             "testcases": [
                 {
-                    "input": {
-                        "neededApples": 1
-                    },
+                    "input": "1",
                     "output": 8,
                     "explanation": "A square plot of side length 2 has 12 apples inside. The perimeter is 2 * 4 = 8."
                 },
                 {
-                    "input": {
-                        "neededApples": 13
-                    },
+                    "input": "13",
                     "output": 16,
                     "explanation": "A square plot of side length 4 has 44 apples inside. The perimeter is 4 * 4 = 16."
                 },
                 {
-                    "input": {
-                        "neededApples": 1000000000
-                    },
+                    "input": "1000000000",
                     "output": 5040
                 },
                 {
-                    "input": {
-                        "neededApples": 2
-                    },
+                    "input":"2",
                     "output": 8
                 },
                 {
-                    "input": {
-                        "neededApples": 10
-                    },
+                    "input":"10",
                     "output": 8
                 },
                 {
-                    "input": {
-                        "neededApples": 100
-                    },
+                    "input":"100",
                     "output": 16
                 },
                 {
-                    "input": {
-                        "neededApples": 1000
-                    },
+                    "input": "1000",
                     "output": 32
                 },
                 {
-                    "input": {
-                        "neededApples": 5000
-                    },
+                    "input": "5000",
                     "output": 40
                 },
                 {
-                    "input": {
-                        "neededApples": 10000
-                    },
+                    "input":"10000",
                     "output": 48
                 },
                 {
-                    "input": {
-                        "neededApples": 25000
-                    },
+                    "input": "25000",
                     "output": 64
                 },
                 {
-                    "input": {
-                        "neededApples": 50000
-                    },
+                    "input": "50000",
                     "output": 80
                 },
                 {
-                    "input": {
-                        "neededApples": 75000
-                    },
+                    "input": "75000",
                     "output": 88
                 },
                 {
-                    "input": {
-                        "neededApples": 100000
-                    },
-                    "output": 96
-                },
-                {
-                    "input": {
-                        "neededApples": 200000
-                    },
-                    "output": 128
-                },
-                {
-                    "input": {
-                        "neededApples": 500000
-                    },
-                    "output": 160
-                },
-                {
-                    "input": {
-                        "neededApples": 1000000
-                    },
-                    "output": 192
-                },
-                {
-                    "input": {
-                        "neededApples": 2000000
-                    },
-                    "output": 256
-                },
-                {
-                    "input": {
-                        "neededApples": 5000000
-                    },
-                    "output": 320
-                },
-                {
-                    "input": {
-                        "neededApples": 10000000
-                    },
-                    "output": 384
-                },
-                {
-                    "input": {
-                        "neededApples": 50000000
-                    },
-                    "output": 576
-                },
-                {
-                    "input": {
-                        "neededApples": 100000000
-                    },
-                    "output": 768
-                },
-                {
-                    "input": {
-                        "neededApples": 500000000
-                    },
-                    "output": 1536
-                },
-                {
-                    "input": {
-                        "neededApples": 1000000000
-                    },
+                    "input":"1000000000",
                     "output": 2016
                 },
                 {
-                    "input": {
-                        "neededApples": 2000000000
-                    },
+                    "input": "2000000000",
                     "output": 2560
                 },
                 {
-                    "input": {
-                        "neededApples": 3000000000
-                    },
+                    "input": "3000000000",
                     "output": 3136
                 },
                 {
-                    "input": {
-                        "neededApples": 4000000000
-                    },
+                    "input":"4000000000",
                     "output": 3648
                 },
                 {
-                    "input": {
-                        "neededApples": 5000000000
-                    },
+                    "input":"5000000000",
                     "output": 4224
                 },
                 {
-                    "input": {
-                        "neededApples": 6000000000
-                    },
+                    "input":  "6000000000",
                     "output": 4800
                 },
                 {
-                    "input": {
-                        "neededApples": 7000000000
-                    },
+                    "input":"7000000000",
                     "output": 5376
                 },
                 {
-                    "input": {
-                        "neededApples": 8000000000
-                    },
+                    "input":"8000000000",
                     "output": 5952
                 },
                 {
-                    "input": {
-                        "neededApples": 9000000000
-                    },
-                    "output": 6528
-                },
-                {
-                    "input": {
-                        "neededApples": 10000000000
-                    },
-                    "output": 7104
-                },
-                {
-                    "input": {
-                        "neededApples": 20000000000
-                    },
+                    "input": "20000000000",
                     "output": 12480
-                },
-                {
-                    "input": {
-                        "neededApples": 30000000000
-                    },
-                    "output": 15872
-                },
-                {
-                    "input": {
-                        "neededApples": 40000000000
-                    },
-                    "output": 19264
-                },
-                {
-                    "input": {
-                        "neededApples": 50000000000
-                    },
-                    "output": 22656
-                },
-                {
-                    "input": {
-                        "neededApples": 60000000000
-                    },
-                    "output": 26048
-                },
-                {
-                    "input": {
-                        "neededApples": 70000000000
-                    },
-                    "output": 29440
-                },
-                {
-                    "input": {
-                        "neededApples": 80000000000
-                    },
-                    "output": 32832
-                },
-                {
-                    "input": {
-                        "neededApples": 90000000000
-                    },
-                    "output": 36224
                 }
             ]
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-        
-        
-                
-
     ]
 }

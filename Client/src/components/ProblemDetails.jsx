@@ -25,11 +25,11 @@ function ProblemDetails() {
       {problemData ? (
         <div>
           <ChakraProvider theme={theme}>
-            <Editor/>
+            <Editor problem = {problemData}/>
           </ChakraProvider>
           {/* <h1>{problemData.title}</h1>
           <p>{problemData.description}</p> */}
-          {problemData}
+          {problemData.title}
         </div>
       ) : (
         <p>Loading problem details...</p>
