@@ -38,7 +38,16 @@ app.get('/', (req, res) => {
 });
 
 app.get('/problems', (req, res) => {
-    res.sendFile(__dirname + '/views/problems.html');
+    // const filePath = path.join(__dirname, 'question.json');
+    
+    fs.readFile("question.json", 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).send('Error reading JSON file');
+        }
+
+        res.setHeader('Content-Type', 'application/json');
+        res.send(data);
+    });
 });
 
 app.get('/problems/:id', (req, res) => {
