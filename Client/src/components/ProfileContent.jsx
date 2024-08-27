@@ -12,8 +12,8 @@ const ProfileContent = () => {
     });
 
     const [formData, setFormData] = useState({
-        name: "Enter Your Name",
-        gender: "Enter Your Gender",
+        name:     "Enter Your Name",
+        gender:   "Enter Your Gender",
         location: "Enter Your Place",
         birthday: "",
         website: "Your Blog or Portfolio",
@@ -38,7 +38,7 @@ const ProfileContent = () => {
 
     const renderField = (field, label, type = "text") => (
         <div className="basic-info-item">
-            <span className="basic-info-label">{label}</span>
+            <span className="basic-info-label" style={{fontSize: "1.2rem"}}>{label}</span>
             {editMode[field] ? (
                 <>
                     {type === "date" ? (
@@ -62,8 +62,8 @@ const ProfileContent = () => {
                 </>
             ) : (
                 <>
-                    <span className="basic-info-value">{formData[field]}</span>
-                    <button className="edit-button" onClick={() => handleEditClick(field)}>Edit</button>
+                    <span className="basic-info-value" style={{fontSize: "1.2rem"}}>{formData[field]}</span>
+                    <button className="edit-button" style={{fontSize: "1.2rem"}} onClick={() => handleEditClick(field)}>Edit</button>
                 </>
             )}
         </div>

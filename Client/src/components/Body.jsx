@@ -15,7 +15,7 @@ const Body = () => {
                     <div className="headline">
                         <HoverText/>
                         <Link to="/problems">
-                            <button className="button">Get Started</button>
+                            <button className="button-body">Get Started</button>
                         </Link>
                     </div>
                     <div className="info">

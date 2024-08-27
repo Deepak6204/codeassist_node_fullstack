@@ -76,7 +76,7 @@ function EditProfile() {
         <div className="profile-cont">
             <ProfileHeader />
             <div className="Profile">
-                <div className="main-content">
+                <div className="main-content" style={{height: "60vh"}}>
                     <ProfileSidebar />
                     <ProfileContent />
                 </div>

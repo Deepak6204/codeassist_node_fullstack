@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import axios from "axios";
 import Loader from "../components/Loader";
+import "../style/problem.css";
+import Dropdown from 'react-bootstrap/Dropdown';
+import Form from 'react-bootstrap/Form';
+import { IoSearch } from "react-icons/io5";
+
 
 function Problems() {
   const [problemList, setProblemList] = useState([]);
@@ -37,9 +43,64 @@ function Problems() {
     <>
       <Navbar />
       <div className="table-container">
-        <h1 className="headline-problem">
-          <input type="search" placeholder="Search questions" />
-        </h1>
+        <div className="headline-content">
+          <div>
+          <Form.Control type="text" placeholder="Search Questions" 
+                style={{
+                  background: '#5e5e5e',
+                  border: 'none',
+                  color: 'white !important',
+                  fontWeight: '500',
+                }} id="search-problem"/>
+          </div>
+          <div>
+            <Dropdown>
+              <Dropdown.Toggle variant="success" id="dropdown-basic"
+              style={{
+                background: '#5e5e5e ',
+                fontWeight: '500',
+                border: 'none'
+                
+              }}>
+                Status
+              </Dropdown.Toggle>
+              <Dropdown.Menu
+              style={{
+                background: '#5e5e5e ',
+                fontWeight: '500',
+                border: 'none'
+                
+              }}>
+                <Dropdown.Item href="#/action-1">Todo</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Solved</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Attempted</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
+          <div>
+            <Dropdown>
+              <Dropdown.Toggle variant="success" id="dropdown-basic" style={{
+                background: '#5e5e5e',
+                fontWeight: '500',
+                border: 'none'
+              }}>
+                Difficulty
+              </Dropdown.Toggle>
+              <Dropdown.Menu
+              style={{
+                background: '#5e5e5e ',
+                fontWeight: '500',
+                border: 'none'
+                
+              }}>
+                <Dropdown.Item href="#/action-1">Easy</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Medium</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Hard</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
+          
+        </div>
         <table className="problem-table">
           <thead className="problem-thead">
             <tr>
@@ -48,12 +109,12 @@ function Problems() {
               <th>Difficulty</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody style={{background : 'transparent'}}>
             {problemList.map((problem, index) => (
               <tr
                 key={problem.id}
                 style={{
-                  backgroundColor: index % 2 === 0 ? "black" : "grey",
+                  backgroundColor: index % 2 === 0 ? "grey" : "black",
                   color: "white",
                 }}
               >
@@ -72,6 +133,7 @@ function Problems() {
           </tbody>
         </table>
       </div>
+      <Footer/>
     </>
   );
 }

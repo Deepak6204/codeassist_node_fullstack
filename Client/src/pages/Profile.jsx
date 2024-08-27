@@ -6,6 +6,7 @@ import { MdOutlineSchool } from "react-icons/md";
 import { TbPencil } from "react-icons/tb";
 import { useNavigate } from 'react-router-dom';
 import Navbar from "../components/Navbar"
+import "../style/profile.css";
 
  
 const Profile = () => {
@@ -46,10 +47,10 @@ const Profile = () => {
             </div>
           </div>
           <div className="profile-edit-btn">
-            <button className='button btn' onClick={handleEditProfile}>Edit Profile</button>
+            <button className='button-profile button-profile-btn' onClick={handleEditProfile}>Edit Profile</button>
           </div>
           <div className="profile-wrapper-content2">
-            <div className="profile-wrapper-content2-detail">
+            <div className="profile-wrapper-content2-detail" style={{background: "rgb(45 45 45)"}}>
               <p><MdOutlineLocationOn className='profile-logo'/>Location</p>
               <p><MdOutlineSchool className='profile-logo'/>College</p>
               <p><TbPencil className='profile-logo'/>Language</p>

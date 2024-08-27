@@ -38,7 +38,6 @@ const Notes = () => {
                             <div className="notes-data">
                                 <img src={note.imgSrc} alt={`${note.title} image`} />
                                 <h4>{note.title}</h4>
-                                <p>Download Notes Here</p>
                                 <a href={`/static/files/${note.fileName}`} download={note.fileName}>Download Pdf</a>
                             </div>
                         </div>
