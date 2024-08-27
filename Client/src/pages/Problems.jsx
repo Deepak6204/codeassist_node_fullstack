@@ -4,16 +4,13 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import axios from "axios";
 import Loader from "../components/Loader";
-<<<<<<< HEAD
 import "../style/problem.css";
 import Dropdown from 'react-bootstrap/Dropdown';
 import Form from 'react-bootstrap/Form';
 import { IoSearch } from "react-icons/io5";
 
+import './css/problem.css';
 
-=======
-import './css/problem.css'
->>>>>>> bdf7be50785c8b5b464b54eb7d72a27910d1b4e0
 function Problems() {
   const [problemList, setProblemList] = useState([]);
   const [filteredProblems, setFilteredProblems] = useState([]);
@@ -43,22 +40,21 @@ function Problems() {
 
   const filterProblems = () => {
     let updatedList = problemList;
-  
+
     if (searchTerm) {
       updatedList = updatedList.filter((problem) =>
         problem.name && problem.name.includes(searchTerm)
       );
     }
-  
+
     if (statusFilter !== "All") {
       updatedList = updatedList.filter(
         (problem) => problem.status === statusFilter
       );
     }
-  
+
     setFilteredProblems(updatedList);
   };
-  
 
   if (loading) {
     return <Loader />;
@@ -72,38 +68,39 @@ function Problems() {
     <>
       <Navbar />
       <div className="table-container">
-<<<<<<< HEAD
         <div className="headline-content">
           <div>
-          <Form.Control type="text" placeholder="Search Questions" 
-                style={{
-                  background: '#5e5e5e',
-                  border: 'none',
-                  color: 'white !important',
-                  fontWeight: '500',
-                }} id="search-problem"/>
+            <Form.Control 
+              type="text" 
+              placeholder="Search Questions" 
+              style={{
+                background: '#5e5e5e',
+                border: 'none',
+                color: 'white !important',
+                fontWeight: '500',
+              }} 
+              id="search-problem"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
           </div>
           <div>
             <Dropdown>
-              <Dropdown.Toggle variant="success" id="dropdown-basic"
-              style={{
-                background: '#5e5e5e ',
+              <Dropdown.Toggle variant="success" id="dropdown-basic" style={{
+                background: '#5e5e5e',
                 fontWeight: '500',
                 border: 'none'
-                
               }}>
                 Status
               </Dropdown.Toggle>
-              <Dropdown.Menu
-              style={{
-                background: '#5e5e5e ',
+              <Dropdown.Menu style={{
+                background: '#5e5e5e',
                 fontWeight: '500',
                 border: 'none'
-                
               }}>
-                <Dropdown.Item href="#/action-1">Todo</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Solved</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Attempted</Dropdown.Item>
+                <Dropdown.Item onClick={() => setStatusFilter('Todo')}>Todo</Dropdown.Item>
+                <Dropdown.Item onClick={() => setStatusFilter('Solved')}>Solved</Dropdown.Item>
+                <Dropdown.Item onClick={() => setStatusFilter('Attempted')}>Attempted</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </div>
@@ -116,12 +113,10 @@ function Problems() {
               }}>
                 Difficulty
               </Dropdown.Toggle>
-              <Dropdown.Menu
-              style={{
-                background: '#5e5e5e ',
+              <Dropdown.Menu style={{
+                background: '#5e5e5e',
                 fontWeight: '500',
                 border: 'none'
-                
               }}>
                 <Dropdown.Item href="#/action-1">Easy</Dropdown.Item>
                 <Dropdown.Item href="#/action-2">Medium</Dropdown.Item>
@@ -129,25 +124,6 @@ function Problems() {
               </Dropdown.Menu>
             </Dropdown>
           </div>
-          
-=======
-        <div className="header-controls">
-          <input
-            type="search"
-            placeholder="Search questions"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <select
-            value={statusFilter}
-            onChange={(e) => setStatusFilter(e.target.value)}
-          >
-            <option value="All">All</option>
-            <option value="Solved">Solved</option>
-            <option value="Attempted">Attempted</option>
-            <option value="Unattempted">Unattempted</option>
-          </select>
->>>>>>> bdf7be50785c8b5b464b54eb7d72a27910d1b4e0
         </div>
         <table className="problem-table">
           <thead className="problem-thead">
@@ -157,13 +133,8 @@ function Problems() {
               <th>Difficulty</th>
             </tr>
           </thead>
-<<<<<<< HEAD
-          <tbody style={{background : 'transparent'}}>
-            {problemList.map((problem, index) => (
-=======
-          <tbody>
+          <tbody style={{ background: 'transparent' }}>
             {filteredProblems.map((problem, index) => (
->>>>>>> bdf7be50785c8b5b464b54eb7d72a27910d1b4e0
               <tr
                 key={problem.id}
                 style={{
@@ -186,7 +157,7 @@ function Problems() {
           </tbody>
         </table>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

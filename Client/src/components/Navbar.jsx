@@ -13,7 +13,7 @@ const Navbar = ({ name, isLogged }) => {
     };
 
     return (
-        <div className="navbar" style={{ paddingTop: "0px", paddingBottom: "0px" }}>
+        <div className="navbar" style={{ paddingTop: "0px", paddingBottom: "0px", background: "transparent" }}>
             <Link to="/" className="logo1">
                 <img src={checklogo} alt="checklogo" />
             </Link>
