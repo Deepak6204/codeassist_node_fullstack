@@ -4,22 +4,30 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import axios from "axios";
 import Loader from "../components/Loader";
+<<<<<<< HEAD
 import "../style/problem.css";
 import Dropdown from 'react-bootstrap/Dropdown';
 import Form from 'react-bootstrap/Form';
 import { IoSearch } from "react-icons/io5";
 
 
+=======
+import './css/problem.css'
+>>>>>>> bdf7be50785c8b5b464b54eb7d72a27910d1b4e0
 function Problems() {
   const [problemList, setProblemList] = useState([]);
+  const [filteredProblems, setFilteredProblems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [statusFilter, setStatusFilter] = useState("All");
 
   useEffect(() => {
     const fetchProblems = async () => {
       try {
         const response = await axios.get("/problems");
         setProblemList(response.data.problems);
+        setFilteredProblems(response.data.problems);
       } catch (err) {
         setError("Error fetching problems: " + err.message);
       } finally {
@@ -29,10 +37,31 @@ function Problems() {
     fetchProblems();
   }, []);
 
+  useEffect(() => {
+    filterProblems();
+  }, [searchTerm, statusFilter]);
+
+  const filterProblems = () => {
+    let updatedList = problemList;
+  
+    if (searchTerm) {
+      updatedList = updatedList.filter((problem) =>
+        problem.name && problem.name.includes(searchTerm)
+      );
+    }
+  
+    if (statusFilter !== "All") {
+      updatedList = updatedList.filter(
+        (problem) => problem.status === statusFilter
+      );
+    }
+  
+    setFilteredProblems(updatedList);
+  };
+  
+
   if (loading) {
-    return (
-      <Loader/>
-    );
+    return <Loader />;
   }
 
   if (error) {
@@ -43,6 +72,7 @@ function Problems() {
     <>
       <Navbar />
       <div className="table-container">
+<<<<<<< HEAD
         <div className="headline-content">
           <div>
           <Form.Control type="text" placeholder="Search Questions" 
@@ -100,6 +130,24 @@ function Problems() {
             </Dropdown>
           </div>
           
+=======
+        <div className="header-controls">
+          <input
+            type="search"
+            placeholder="Search questions"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <select
+            value={statusFilter}
+            onChange={(e) => setStatusFilter(e.target.value)}
+          >
+            <option value="All">All</option>
+            <option value="Solved">Solved</option>
+            <option value="Attempted">Attempted</option>
+            <option value="Unattempted">Unattempted</option>
+          </select>
+>>>>>>> bdf7be50785c8b5b464b54eb7d72a27910d1b4e0
         </div>
         <table className="problem-table">
           <thead className="problem-thead">
@@ -109,8 +157,13 @@ function Problems() {
               <th>Difficulty</th>
             </tr>
           </thead>
+<<<<<<< HEAD
           <tbody style={{background : 'transparent'}}>
             {problemList.map((problem, index) => (
+=======
+          <tbody>
+            {filteredProblems.map((problem, index) => (
+>>>>>>> bdf7be50785c8b5b464b54eb7d72a27910d1b4e0
               <tr
                 key={problem.id}
                 style={{
@@ -118,7 +171,7 @@ function Problems() {
                   color: "white",
                 }}
               >
-                <td className="status solved"></td>
+                <td className={`status ${problem.status}`}></td>
                 <td className="td-problm">
                   <Link
                     to={`/problems/${problem.id}`}
