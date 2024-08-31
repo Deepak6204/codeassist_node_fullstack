@@ -24,7 +24,7 @@ function ProblemDetails() {
   }, [id]);
 
   return (
-    <div>
+    <div style={{background: "red"}}>
       {loading ? (
         <Loader /> // Use your custom loader component
       ) : (

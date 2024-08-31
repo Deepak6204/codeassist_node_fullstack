@@ -931,7 +931,7 @@
 <path transform="matrix(1,0,0,1,354,336)" stroke-width="4" stroke-linecap="round" stroke-dasharray="1,8" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#2b78e4" d="M0 0C34.89493 .7024812 79.89493 1.588876 135 2.659184"/>
 <path transform="matrix(1,0,0,1,356,276)" d="M0 0C28.33333 36 76 53.33333 143 52" fill-opacity="0"/>
 <path transform="matrix(1,0,0,1,356,276)" stroke-width="4" stroke-linecap="round" stroke-dasharray="1,8" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#2b78e4" d="M0 0C28.33333 36 76 53.33333 143 52"/>
-<text xml:space="preserve" transform="matrix(1 0 -0 1 510 183.39405)" font-size="32" font-family="BalsamiqSans"><tspan y="-25.19685" x="0 22.880002 40.992006 50.496007 68.60801 77.24801 96.80001 114.84801 132.96 140.09601 154.56002 170.40001">Data Analyst</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 510 183.39405)" font-size="32" fill="#fff" font-family="BalsamiqSans"><tspan y="-25.19685" x="0 22.880002 40.992006 50.496007 68.60801 77.24801 96.80001 114.84801 132.96 140.09601 154.56002 170.40001">Data Analyst</tspan></text>
 </g>
 <g clip-path="url(#clip_12)">
 <path transform="matrix(1,0,0,-1,0,3025.091)" d="M819 2854.091H1190V3003.091H819Z" fill="#ffffff"/>

@@ -13,6 +13,7 @@ import appImg from "../images/app.jpg";
 import devopsImg from "../images/devOps.webp";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer"
+import Check from "../images/check.webp";
 import { Navigate, useNavigate } from 'react-router-dom';
 
 const Roadmap = () => {
@@ -55,9 +56,11 @@ const Roadmap = () => {
     <>
     <Navbar/>
     <div>
-      <div className="bgimage"></div>
+      <div className="bgimage" style={{height: "70vh"}}>
+        <img src={Check} alt="#" style={{width:"100%", height: "100%"}}/>
+      </div>
       <section className="white-block">
-        <div className="container-roadmap">
+        <div className="container-roadmap ">
           <div className="box-roadmap">
             <a target="_blank" rel="noopener noreferrer" onClick={() => handleClick('/roadmaps/frontend')}>
               <img src={aiImg} alt="Frontend Development logo-roadmap" />
