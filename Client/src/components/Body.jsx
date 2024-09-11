@@ -5,17 +5,22 @@ import assistImage from '../images/assist.png';
 import assistImage1 from '../images/assist1.png';
 import assistImage2 from '../images/assist2.png';
 import laptop from '../images/mac-laptop-png-13.png'
+import { useNavigate, Navigate } from 'react-router-dom';
 
 
 const Body = () => {
+    const navigate =  useNavigate();
+    const handleClick = (route) => {
+        navigate('/event');
+      };
     return (
         <>
             <body>
                 <div className="body-section">
                     <div className="headline">
                         <HoverText/>
-                        <Link to="/problems">
-                            <button className="button-body">Get Started</button>
+                        <Link to="/event">
+                            <button className="button-body"  >Get Started</button>
                         </Link>
                     </div>
                     <div className="info">

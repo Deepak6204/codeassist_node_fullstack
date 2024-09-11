@@ -30,6 +30,7 @@ import Game from './components/svg/svgCont/game';
 import DevOps from './components/svg/svgCont/devops';
 import Graphic from './components/svg/svgCont/graphics';
 import Project from './pages/Project';
+import Event from './pages/Event';
 
 function App() {
     return (
@@ -63,6 +64,7 @@ function App() {
                 <Route path="/roadmaps/ios" element={<Ios/>}/>
                 <Route path="/roadmaps/devOps" element={<DevOps/>}/>
                 <Route path="/roadmaps/graphics" element={<Graphic/>}/>
+                <Route path="/event" element={<Event/>}/>
             </Routes>
             {/* <Footer/> */}
         </Router>
