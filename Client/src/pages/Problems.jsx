@@ -23,6 +23,7 @@ function Problems() {
     const fetchProblems = async () => {
       try {
         const response = await axios.get("/problems");
+        console.log(response.data)
         setProblemList(response.data.problems);
         setFilteredProblems(response.data.problems);
       } catch (err) {

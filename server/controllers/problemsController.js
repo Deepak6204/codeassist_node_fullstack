@@ -7,6 +7,7 @@ exports.getProblems = (req, res) => {
       return res.status(500).send('Error reading JSON file');
     }
     res.setHeader('Content-Type', 'application/json');
+    console.log(data)
     res.send(data);
   });
 };
@@ -19,7 +20,7 @@ exports.getProblemById = (req, res) => {
       return;
     }
     const problemList = JSON.parse(data);
-    const problem = problemList.problems.find(p => p.id === problemId);
+      const problem = problemList.problems.find(p => p.id === problemId);
     if (problem) {
       res.json(problem);
     } else {

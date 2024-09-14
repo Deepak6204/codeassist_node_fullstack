@@ -7,7 +7,9 @@ import Output from "./Output";
 const CodeEditor = ({problem}) => {
   const editorRef = useRef();
   const [language, setLanguage] = useState("cpp");
-  const [value, setValue] = useState(problem.cpp);
+  console.log(problem.language)
+  const [value, setValue] = useState(problem[language]);
+  const [testCases, setTestCases] = useState(problem.testcase.slice(0, 3));
 
   const onMount = (editor) => {
     editorRef.current = editor;
@@ -58,13 +60,13 @@ const CodeEditor = ({problem}) => {
               height="40vh"
               theme="vs-dark"
               language={language}
-              defaultValue={problem.java_driver_code}
+              defaultValue={problem[language]}
               onMount={onMount}
               value={value}
               onChange={(value) => setValue(value)}
             />
           </Box>
-          <Output editorRef={editorRef} language={language} />
+          <Output editorRef={editorRef} language={language} testCases={testCases}/>
         </Box>
         
       </HStack>

@@ -36,12 +36,12 @@
             "level":"easy",
             "testcase": [
                 {
-                    "input": "1,2",
+                    "input": "1,2,3,4",
                     "output": "[24,12,8,6]",
                     "explanation": "The product of all elements except nums[0] (1) is 24, except nums[1] (2) is 12, except nums[2] (3) is 8, and except nums[3] (4) is 6."
                 },
                 {
-                    "input": "1,1",
+                    "input": "-1,1,0,-3,3",
                     "output": "[0,0,9,0,0]",
                     "explanation": "The product of all elements except nums[2] (0) is 9. For other indices, the result is 0 because multiplying by 0 yields 0."
                 }
@@ -50,6 +50,34 @@
             "cpp": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> productExceptSelf(vector<int>& nums) {\n        // Implement the function to calculate product of array except self\n        return vector<int>(nums.size(), 1);\n    }\n};\n\nint main() {\n    int n;\n    cin >> n;\n    vector<int> nums(n);\n    for (int i = 0; i < n; i++) {\n        cin >> nums[i];\n    }\n    Solution solution;\n    vector<int> result = solution.productExceptSelf(nums);\n    for (int num : result) {\n        cout << num << \" \";\n    }\n    cout << endl;\n    return 0;\n}",
             "python": "class Solution:\n    def productExceptSelf(self, nums):\n        # Implement the function to calculate product of array except self\n        return [1] * len(nums)\n\nif __name__ == '__main__':\n    n = int(input())\n    nums = list(map(int, input().split()))\n    solution = Solution()\n    result = solution.productExceptSelf(nums)\n    print(result)\n",
             "c": "#include <stdio.h>\n\nvoid productExceptSelf(int* nums, int numsSize, int* returnArray) {\n    // Implement the function to calculate product of array except self\n    for (int i = 0; i < numsSize; i++) {\n        returnArray[i] = 1;\n    }\n}\n\nint main() {\n    int n;\n    scanf(\"%d\", &n);\n    int nums[n];\n    for (int i = 0; i < n; i++) {\n        scanf(\"%d\", &nums[i]);\n    }\n    int result[n];\n    productExceptSelf(nums, n, result);\n    for (int i = 0; i < n; i++) {\n        printf(\"%d \", result[i]);\n    }\n    printf(\"\\n\");\n    return 0;\n}"
+        },
+        {
+            "id": "2",
+            "name" : "Plus One",
+            "problem_statement": "You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's. Increment the large integer by one and return the resulting array of digits.",
+            "constraints": "1 <= digits.length <= 100\n0 <= digits[i] <= 9\nThe digits array does not contain any leading 0's.",
+            "level":"easy",
+            "testcase": [
+                {
+                    "input": "1,2,3",
+                    "output": "[1,2,4",
+                    "explanation": "The array represents the integer 123. Incrementing by one gives 123 + 1 = 124. Thus, the result should be [1,2,4]."
+                },
+                {
+                    "input": "4,3,2,",
+                    "output": "[4,3,2,2",
+                    "explanation": "The array represents the integer 4321. Incrementing by one gives 4321 + 1 = 4322. Thus, the result should be [4,3,2,2]."
+                },
+                {
+                    "input": "9",
+                    "output": "[1,0",
+                    "explanation": "The array represents the integer 9. Incrementing by one gives 9 + 1 = 10. Thus, the result should be [1,0]."
+                }
+            ],
+            "java": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        String num1 = scanner.next();\n        String num2 = scanner.next();\n        Solution solution = new Solution();\n        String result = solution.multiply(num1, num2);\n        System.out.println(result);\n    }\n}\n\nclass Solution {\n    public String multiply(String num1, String num2) {\n        // Implement the function to multiply strings\n        return \"\";\n    }\n}",
+            "cpp": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Solution {\npublic:\n    string multiply(string num1, string num2) {\n        // Implement the function to multiply strings\n        return \"\";\n    }\n};\n\nint main() {\n    string num1, num2;\n    cin >> num1 >> num2;\n    Solution solution;\n    string result = solution.multiply(num1, num2);\n    cout << result << endl;\n    return 0;\n}",
+            "python": "class Solution:\n    def multiply(self, num1, num2):\n        # Implement the function to multiply strings\n        return \"\"\n\nif __name__ == '__main__':\n    num1 = input()\n    num2 = input()\n    solution = Solution()\n    result = solution.multiply(num1, num2)\n    print(result)\n",
+            "c": "#include <stdio.h>\n#include <string.h>\n\nvoid multiply(char* num1, char* num2, char* result) {\n    // Implement the function to multiply strings\n    strcpy(result, \"\");\n}\n\nint main() {\n    char num1[201], num2[201];\n    scanf(\"%200s %200s\", num1, num2);\n    char result[402];\n    multiply(num1, num2, result);\n    printf(\"%s\\n\", result);\n    return 0;\n}"
         },
         {
             "id": "3",
