@@ -47,6 +47,17 @@
     background-color: rgb(0, 255, 166);
     color: black;
   }
+
+  button.selected{
+    background-color: rgb(0, 255, 166);
+    color: black;
+  }
+
+  button.answered{
+    background-color: lightslategrey;
+    cursor: not-allowed;
+    color: black;
+  }
   
   .main-content {
     display: flex;
