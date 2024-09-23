@@ -181,7 +181,7 @@ const questions = {
       {
         id: 1,
         code: [
-          { line: "let x = 5;", hasBug: false },
+          { line: "let x = lodu yash;", hasBug: false },
           { line: "if (x == 10) {", hasBug: false },
           { line: 'console.log("x is 10");', hasBug: false },
           { line: "}", hasBug: false },

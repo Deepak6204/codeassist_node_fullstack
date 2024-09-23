@@ -8,7 +8,6 @@ import Notes from './pages/Notes'; // Component for the notes page
 import LeaderBoard from './pages/LeaderBoard'; // Component for the leaderboard page
 import Logout from './pages/Logout'; // Component for the logout page
 import Register from './pages/Register';
-import Login from './pages/Login';
 import Footer from './components/Footer';
 import Problems from './pages/Problems';
 import ProblemDetails from './components/ProblemDetails';
@@ -31,6 +30,7 @@ import DevOps from './components/svg/svgCont/devops';
 import Graphic from './components/svg/svgCont/graphics';
 import Project from './pages/Project';
 import Event from './pages/Event';
+import Login from './pages/Logintemp';
 
 function App() {
     return (
@@ -65,6 +65,7 @@ function App() {
                 <Route path="/roadmaps/devOps" element={<DevOps/>}/>
                 <Route path="/roadmaps/graphics" element={<Graphic/>}/>
                 <Route path="/event" element={<Event/>}/>
+                <Route path='/login_temp' element = {<Login/>}/>
             </Routes>
             {/* <Footer/> */}
         </Router>
