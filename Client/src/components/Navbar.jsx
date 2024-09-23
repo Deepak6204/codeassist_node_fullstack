@@ -28,6 +28,7 @@ const Navbar = ({ name, isLogged }) => {
                 <li><Link to="/projects">PROJECTS</Link></li>
                 <li><Link to="/roadmaps">ROADMAPS</Link></li>
                 <li><Link to="/notes">NOTES</Link></li>
+                <li><Link to="/leaderboard">LEADERBOARD</Link></li>
                 <li className="user-dropdown">
                     <Link to="/profile"> <FaUser style={{marginBottom: "6px"}} /> </Link>
                 </li>
