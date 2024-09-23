@@ -4,15 +4,47 @@ import { auth, provider, signInWithPopup, signOut } from '../firebaseConfig.js';
 const Login = () => {
   const [user, setUser] = useState(null);
 
-  const handleLogin = () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        setUser(result.user);
-        console.log('User:', result.user);
-      })
-      .catch((error) => {
-        console.error('Error during sign-in:', error);
+  const handleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const userData = result.user;
+
+      // Set user in state
+      setUser(userData);
+      console.log('User:', userData);
+
+      // Send user data to your backend
+      await sendUserDataToBackend(userData);
+    } catch (error) {
+      console.error('Error during sign-in:', error);
+    }
+  };
+
+  const sendUserDataToBackend = async (userData) => {
+    const { uid, email, displayName } = userData;
+
+    try {
+      const response = await fetch('http://localhost:5000/api/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firebaseId: uid,
+          email,
+          name: displayName || 'Anonymous',
+        }),
       });
+
+      if (!response.ok) {
+        throw new Error('Failed to save user data');
+      }
+
+      const data = await response.json();
+      console.log('User data stored in database:', data);
+    } catch (error) {
+      console.error('Error sending user data:', error);
+    }
   };
 
   const handleLogout = () => {
