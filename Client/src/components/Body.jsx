@@ -6,6 +6,7 @@ import assistImage1 from '../images/assist1.png';
 import assistImage2 from '../images/assist2.png';
 import laptop from '../images/mac-laptop-png-13.png'
 import { useNavigate, Navigate } from 'react-router-dom';
+import demoVideo from '../images/demo.mp4';
 
 
 const Body = () => {
@@ -25,6 +26,9 @@ const Body = () => {
                     </div>
                     <div className="info">
                         <img src={laptop} alt="laptopPng"  />
+                        {/* <div className="video-container">
+                            <video src={demoVideo} controls autoPlay muted className="video" />
+                        </div> */}
                     </div>
                 </div>
 
