@@ -11,18 +11,22 @@ import demoVideo from '../images/demo.mp4';
 
 const Body = () => {
     const navigate =  useNavigate();
-    const handleClick = (route) => {
-        navigate('/event');
-      };
+
+    const handleClick = () => {
+        const isLoggedIn = localStorage.getItem('firebaseId');
+        if (isLoggedIn) {
+            navigate('/event');
+        } else {
+            navigate('/login_temp');
+        }
+    };
     return (
         <>
             <body>
                 <div className="body-section">
                     <div className="headline">
                         <HoverText/>
-                        <Link to="/event">
-                            <button className="button-body"  >Get Started</button>
-                        </Link>
+                        <button className="button-body" onClick={handleClick}>Get Started</button>
                     </div>
                     <div className="info">
                         <img src={laptop} alt="laptopPng"  />
