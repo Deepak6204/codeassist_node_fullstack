@@ -41,6 +41,8 @@ const Login = () => {
       }
 
       const data = await response.json();
+      localStorage.setItem('firebaseId', uid);
+      console.log("hi",localStorage.getItem('firebaseId'));
       console.log('User data stored in database:', data);
     } catch (error) {
       console.error('Error sending user data:', error);

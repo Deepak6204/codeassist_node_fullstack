@@ -31,6 +31,7 @@ import Graphic from './components/svg/svgCont/graphics';
 import Project from './pages/Project';
 import Event from './pages/Event';
 import Login from './pages/Logintemp';
+import Users from './pages/Users'
 
 function App() {
     return (
@@ -66,6 +67,7 @@ function App() {
                 <Route path="/roadmaps/graphics" element={<Graphic/>}/>
                 <Route path="/event" element={<Event/>}/>
                 <Route path='/login_temp' element = {<Login/>}/>
+                <Route path='/users' element = {<Users/>}/>
             </Routes>
             {/* <Footer/> */}
         </Router>

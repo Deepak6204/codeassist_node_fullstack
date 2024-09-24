@@ -595,15 +595,16 @@ function Event() {
   };
 
   const handleSubmit = async (selectedQuestion,elapsed_time) => {
-    console.log(elapsed_time);
-
+    console.log(selectedRound);
+    const firebaseId = localStorage.getItem('firebaseId')
+    console.log("event firebaseId: ", firebaseId)
     try {
       const response = await fetch('/handle-submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ selectedQuestion, selectedBugs , elapsed_time}),
+        body: JSON.stringify({ selectedQuestion, selectedBugs , elapsed_time,selectedRound,firebaseId}),
       });
 
       const result = await response.json();

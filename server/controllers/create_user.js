@@ -5,7 +5,6 @@ const loginUser = async (req, res) => {
 
   try {
     let user = await User.findOne({ firebaseId });
-
     // If the user does not exist, create a new user with null scores
     if (!user) {
       user = new User({
