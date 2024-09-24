@@ -5,9 +5,18 @@ const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   scores: {
-    round1: { type: Number, default: 0 },
-    round2: { type: Number, default: 0 },
-    round3: { type: Number, default: 0 }
+    round1: {
+      score: { type: Number, default: null }, // Initially null (no score if unattempted)
+      time: { type: Number, default: null },  // Time is also null until round is attempted
+    },
+    round2: {
+      score: { type: Number, default: null },
+      time: { type: Number, default: null },
+    },
+    round3: {
+      score: { type: Number, default: null },
+      time: { type: Number, default: null },
+    }
   }
 });
 
