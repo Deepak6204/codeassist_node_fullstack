@@ -32,6 +32,7 @@ import Project from './pages/Project';
 import Event from './pages/Event';
 import Login from './pages/Logintemp';
 import Users from './pages/Users'
+import CreditsPage from './pages/Credit'
 
 function App() {
     return (
@@ -68,6 +69,7 @@ function App() {
                 <Route path="/event" element={<Event/>}/>
                 <Route path='/login_temp' element = {<Login/>}/>
                 <Route path='/users' element = {<Users/>}/>
+                <Route path='/creditsPage' element = {<CreditsPage/>}/>
             </Routes>
             {/* <Footer/> */}
         </Router>

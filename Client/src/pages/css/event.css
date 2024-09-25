@@ -87,13 +87,17 @@
   
   .code-snippet {
     background-color: #333;
-    padding: 20px;
     border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0px 0px 2px rgb(255 255 255 / 20%);
     margin-bottom: 20px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+  }
+  .code-questions {
+    background-color: #333
   }
   
   .submit-button {

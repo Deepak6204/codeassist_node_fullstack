@@ -750,18 +750,23 @@ function Event() {
                 {selectedQuestion && (
                   <div className="code-section">
                     <div className="timer">
-                      <h3>Time left: {Math.floor(timeLeft/60)}min {timeLeft-(Math.floor(timeLeft/60)*60)}s</h3>
+                      <h3 style={{
+                          fontSize: '24px',
+                          color: '#FF3D00', // Bright red for visibility
+                          textShadow: '0px 0px 10px rgba(255, 61, 0, 0.5)'
+                      }}
+                      >Time left: {Math.floor(timeLeft/60)}min {timeLeft-(Math.floor(timeLeft/60)*60)}s</h3>
                     </div>
                     <h3>Code Snippet for Question {selectedQuestion.id}</h3>
                     <div className="code-snippet">
                       {selectedQuestion.code.map((line, index) => (
-                        <div key={index}>
+                        <div key={index} className="code-questions">
                           <input
                             type="checkbox"
                             checked={selectedBugs.includes(index)}
                             onChange={() => handleBugSelection(index)}
                           />
-                          <span>{line.line}</span>
+                          <span className="code-questions">{line.line}</span>
                         </div>
                       ))}
                     </div>
