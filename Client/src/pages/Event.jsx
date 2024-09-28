@@ -571,7 +571,22 @@ function Event() {
   };
   
 
-  const handleRoundSelection = (round) => {
+  const handleRoundSelection  = async (round) => {
+    const firebaseId = localStorage.getItem('firebaseId')
+    const response = await fetch('http://localhost:5000/is_eligible', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ round,firebaseId}),
+    });
+
+    const result = await response.json();
+
+    if(result.attempt == false){
+      setSelectedRound(null)
+      return 0;
+    }
     setSelectedRound(round);
     setShowRules(true);
   };
