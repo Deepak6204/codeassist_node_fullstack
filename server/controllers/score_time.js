@@ -27,6 +27,8 @@ const updateScore = async (req, res) => {
     // Update score and elapsed_time for the specified selectedRound if it's the first attempt
     user.scores[selectedRound].score += score;
     user.scores[selectedRound].time = elapsed_time;
+    user.scores[selectedRound].attempted = true;
+
 
     // Save updated user data
     await user.save();
